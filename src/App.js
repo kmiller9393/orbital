@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
+import key from './apiKey';
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  async componentDidMount() {
+    const response = await fetch(
+      `https://api.nasa.gov/planetary/apod?api_key=${key}&count=100`
+    );
+    const spaceData = await response.json();
+  }
+
   render() {
     return (
       <div className="App">
