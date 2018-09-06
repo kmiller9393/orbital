@@ -4,7 +4,7 @@ import './index.css';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { BrowserRouter } from 'react-router-dom';
-import App from './App';
+import App from './containers/App/App';
 import registerServiceWorker from './registerServiceWorker';
 import rootReducer from './reducers';
 

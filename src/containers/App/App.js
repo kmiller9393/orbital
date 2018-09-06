@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import key from './apiKey';
-import { populatePage } from './actions';
+import key from '../../apiKey';
+import { populatePage } from '../../actions';
 import { connect } from 'react-redux';
 import { Route, withRouter } from 'react-router-dom';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -11,9 +10,7 @@ class App extends Component {
     const response = await fetch(
       `https://api.nasa.gov/planetary/apod?api_key=${key}&start_date=2018-05-06&end_date=2018-09-06`
     );
-    // or fetch all archive?
     const spaceData = await response.json();
-    console.log(spaceData);
     this.props.getSpaceData(spaceData);
   }
 
@@ -21,8 +18,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Welcome to Orbital</h1>
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
