@@ -1,9 +1,4 @@
-export const populatePage = loadingData => ({
+export const populatePage = glossary => ({
   type: 'POPULATE_PAGE',
-  loadingData
+  glossary
 });
-
-// export const setMarsInfo = marsInfo => ({
-//   type: 'SET_MARS_INFO',
-//   marsInfo
-// });
