@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import { populateReducer } from './populateReducer';
 
 const rootReducer = combineReducers({
-  rovers: populateReducer
+  facts: populateReducer
 });
 
 export default rootReducer;

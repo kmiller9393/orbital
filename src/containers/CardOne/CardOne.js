@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import './MarsCard.css';
+import './CardOne.css';
 
-class MarsCard extends Component {
+class CardOne extends Component {
   constructor() {
     super();
     this.state = {
@@ -30,4 +30,4 @@ export const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   null
-)(MarsCard);
+)(CardOne);
