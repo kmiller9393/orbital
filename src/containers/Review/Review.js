@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { NavLink, withRouter } from 'react-router-dom';
-import { populatePage } from '../../actions';
+import { populateFacts } from '../../thunks';
 import './Review.css';
 
 class Review extends Component {
   setReviewInfo = async () => {
-    const response = await fetch(
-      'http://hubblesite.org/api/v3/glossary?page=all'
-    );
-    const fetchedFacts = await response.json();
-    this.props.getSpaceData(fetchedFacts);
+    const { populateFacts } = this.props;
+    await populateFacts();
   };
 
   render() {
@@ -19,7 +16,7 @@ class Review extends Component {
         <h2>Orbital</h2>
         <h2>Review Sections</h2>
         <button className="review-button" onClick={this.setReviewInfo}>
-          <NavLink className="review-link" to="/one-review">
+          <NavLink className="review-link" to="/review-one">
             Week 1
           </NavLink>
         </button>
@@ -29,7 +26,7 @@ class Review extends Component {
 }
 
 export const mapDispatchToProps = dispatch => ({
-  getSpaceData: glossary => dispatch(populatePage(glossary))
+  populateFacts: () => dispatch(populateFacts())
 });
 
 export default withRouter(
