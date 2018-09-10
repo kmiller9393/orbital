@@ -1,10 +1,10 @@
 import React from 'react';
 import CardOne from '../../containers/CardOne/CardOne';
-import { marsReview } from '../../utils/questions';
+import { glossaryReview } from '../../utils/questions';
 import './ReviewContainer.css';
 
 const ReviewContainer = () => {
-  const setOneQuestions = marsReview.map((question, index) => (
+  const setOneQuestions = glossaryReview.map((question, index) => (
     <CardOne question={question} key={index} />
   ));
 
