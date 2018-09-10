@@ -1,11 +1,12 @@
 import React from 'react';
 import CardOne from '../../containers/CardOne/CardOne';
-import { glossaryReview } from '../../utils/questions';
+import { connect } from 'react-redux';
 import './ReviewContainer.css';
 
-const ReviewContainer = () => {
-  const setOneQuestions = glossaryReview.map((question, index) => (
-    <CardOne question={question} key={index} />
+const ReviewContainer = props => {
+  let facts = props.facts.slice(0, 9);
+  const setOneQuestions = facts.map((subject, index) => (
+    <CardOne subject={subject.name} answer={subject.definition} key={index} />
   ));
 
   return (
@@ -17,4 +18,11 @@ const ReviewContainer = () => {
   );
 };
 
-export default ReviewContainer;
+export const mapStateToProps = state => ({
+  facts: state.facts
+});
+
+export default connect(
+  mapStateToProps,
+  null
+)(ReviewContainer);
