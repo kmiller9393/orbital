@@ -21,7 +21,7 @@ class ReviewContainer extends Component {
     }
 
     this.setState({ page: page - 1 });
-    history.push(`/review-one/${facts[page].name}`);
+    history.replace(`/review-one/${facts[page].name}`);
   };
 
   moveForward = () => {
@@ -33,7 +33,7 @@ class ReviewContainer extends Component {
     }
 
     this.setState({ page: page + 1 });
-    history.push(`/review-one/${facts[page].name}`);
+    history.replace(`/review-one/${facts[page].name}`);
   };
 
   render() {
