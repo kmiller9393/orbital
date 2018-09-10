@@ -16,15 +16,15 @@ class CardOne extends Component {
         onClick={() => this.setState({ toggle: !this.state.toggle })}
         className="Card"
       >
-        {this.props.question}
-        <p>{this.state.toggle && 'ANSWER'}</p>
+        {this.props.subject}
+        <p>{this.state.toggle && this.props.answer}</p>
       </div>
     );
   }
 }
 
 export const mapStateToProps = state => ({
-  questions: state.rovers
+  definitions: state.rovers
 });
 
 export default connect(
