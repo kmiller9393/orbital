@@ -1,3 +1,7 @@
-let fact =
-  'An asteroid is a block of space material that. Lets see if this actually works';
-fact = fact.split('.')[0].toLowerCase();
+export const fetchSpaceFacts = async () => {
+  const response = await fetch(
+    'http://hubblesite.org/api/v3/glossary?page=all'
+  );
+  const fetchedFacts = await response.json();
+  return fetchedFacts;
+};
