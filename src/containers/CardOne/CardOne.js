@@ -16,8 +16,10 @@ class CardOne extends Component {
         onClick={() => this.setState({ toggle: !this.state.toggle })}
         className="Card"
       >
-        <p>{this.props.name}</p>
-        <p>{this.state.toggle && this.props.definition}</p>
+        <p className="card-title">{this.props.name}</p>
+        <p className="card-body">
+          {this.state.toggle && this.props.definition}
+        </p>
       </div>
     );
   }
