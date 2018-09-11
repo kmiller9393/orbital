@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import orbital from '../../images/orbital-header.svg';
 import './Home.css';
 
 export default class Home extends Component {
   render() {
     return (
       <div>
-        <header className="App-header">
-          <h1 className="App-title">Orbital</h1>
-          <h1 className="App-title">Welcome back, Brandon</h1>
+        <header className="main-header-container">
+          <img className="main-header-image" src={orbital} alt="Orbital" />
+          <h1 className="header-title">Welcome Back, Brandon</h1>
         </header>
-        <button className="home-button">
-          <NavLink className="review-link" to="/review">
-            Review
-          </NavLink>
-        </button>
+        <div className="homepage-buttons">
+          <button className="home-button">
+            <NavLink className="review-link" to="/review">
+              Review
+            </NavLink>
+          </button>
+        </div>
       </div>
     );
   }
