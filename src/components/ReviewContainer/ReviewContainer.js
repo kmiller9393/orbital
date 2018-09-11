@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CardOne from '../../containers/CardOne/CardOne';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import orbital from '../../images/orbital-header.svg';
 import './ReviewContainer.css';
 
 class ReviewContainer extends Component {
@@ -28,7 +29,7 @@ class ReviewContainer extends Component {
     const { page } = this.state;
     const { history, facts } = this.props;
 
-    if (page > 45) {
+    if (page > 7) {
       return;
     }
 
@@ -42,11 +43,20 @@ class ReviewContainer extends Component {
 
     return (
       <div>
-        <h2>Orbital</h2>
-        <h2>Week 1 Review</h2>
+        <img className="review-container-image" src={orbital} alt="Orbital" />
+        <h2 className="week-title">Week 1 Review</h2>
         <CardOne {...facts[page]} key={page} />
-        {page > 0 && <button onClick={this.moveBack}>Previous</button>}
-        <button onClick={this.moveForward}>Next</button>
+        <div className="button-container">
+          <button className="review-container-button" onClick={this.moveBack}>
+            Previous
+          </button>
+          <button
+            className="review-container-button"
+            onClick={this.moveForward}
+          >
+            Next
+          </button>
+        </div>
       </div>
     );
   }
