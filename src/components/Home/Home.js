@@ -17,6 +17,11 @@ export default class Home extends Component {
               Review
             </NavLink>
           </button>
+          <button className="home-button">
+            <NavLink className="review-link" to="/trivia">
+              Trivia Center
+            </NavLink>
+          </button>
         </div>
       </div>
     );
