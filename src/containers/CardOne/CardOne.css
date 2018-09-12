@@ -1,13 +1,21 @@
 .Card {
+  align-items: center;
   background-color: #b72424;
   border-radius: 7px;
   color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 265px;
-  margin: 1.5rem 1rem 0 1rem;
+  margin: 1.5rem 1.75rem 0 1.75rem;
   padding: 0.25rem 0 0.5rem 0; }
 
 .card-title {
-  font-size: 1.2rem; }
+  font-size: 2rem;
+  padding-top: 1rem; }
+
+.card-title-toggle {
+  display: none; }
 
 .card-body {
   padding: 0 0.7rem 0 0.7rem; }

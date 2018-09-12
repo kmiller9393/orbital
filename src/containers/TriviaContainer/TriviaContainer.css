@@ -6,3 +6,7 @@
 .trivia-title {
   color: #f7f7f7;
   font-family: 'Chalkboard SE', 'Times New Roman', serif; }
+
+.answers-container {
+  color: #f7f7f7;
+  padding: 0 0.75rem 0 0.75rem; }

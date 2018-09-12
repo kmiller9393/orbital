@@ -3,7 +3,12 @@ import { connect } from 'react-redux';
 
 class TriviaCard extends Component {
   render() {
-    return <div />;
+    return (
+      <div>
+        <p>{this.props.question}</p>
+        <p>{this.props.answer}</p>
+      </div>
+    );
   }
 }
 

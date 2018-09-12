@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import './CardOne.css';
 
 class CardOne extends Component {
@@ -16,7 +15,9 @@ class CardOne extends Component {
         onClick={() => this.setState({ toggle: !this.state.toggle })}
         className="Card"
       >
-        <p className="card-title">{this.props.name}</p>
+        <p className={!this.state.toggle ? 'card-title' : 'card-title-toggle'}>
+          {this.props.name}
+        </p>
         <p className="card-body">
           {this.state.toggle && this.props.definition}
         </p>
@@ -25,11 +26,4 @@ class CardOne extends Component {
   }
 }
 
-export const mapStateToProps = state => ({
-  definitions: state.rovers
-});
-
-export default connect(
-  mapStateToProps,
-  null
-)(CardOne);
+export default CardOne;

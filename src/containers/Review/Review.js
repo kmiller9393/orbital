@@ -13,7 +13,9 @@ class Review extends Component {
   render() {
     return (
       <div className="review-container">
-        <img className="review-header-image" src={orbital} alt="Orbital" />
+        <NavLink to="/">
+          <img className="review-header-image" src={orbital} alt="Orbital" />
+        </NavLink>
         <h2 className="review-header">Weekly Reviews</h2>
         <div className="review-button-container">
           <button className="review-button" onClick={this.setReviewInfo}>

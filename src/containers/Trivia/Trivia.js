@@ -13,7 +13,9 @@ class Trivia extends Component {
   render() {
     return (
       <div className="trivia-container">
-        <img className="trivia-header-image" src={orbital} alt="Orbital" />
+        <NavLink to="/">
+          <img className="trivia-header-image" src={orbital} alt="Orbital" />
+        </NavLink>
         <h2 className="trivia-header">Trivia Center</h2>
         <div className="trivia-button-container">
           <button className="trivia-button" onClick={this.setTriviaInfo}>
