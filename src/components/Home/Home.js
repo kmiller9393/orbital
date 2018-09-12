@@ -18,7 +18,7 @@ export default class Home extends Component {
             </NavLink>
           </button>
           <button className="home-button">
-            <NavLink className="review-link" to="/trivia">
+            <NavLink className="review-link" to="/trivia-center">
               Trivia Center
             </NavLink>
           </button>
