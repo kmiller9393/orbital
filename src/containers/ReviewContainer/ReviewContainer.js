@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CardOne from '../CardOne/CardOne';
-import { withRouter } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import orbital from '../../images/orbital-header.svg';
 import './ReviewContainer.css';
@@ -31,7 +31,9 @@ class ReviewContainer extends Component {
 
     return (
       <div>
-        <img className="review-container-image" src={orbital} alt="Orbital" />
+        <NavLink to="/">
+          <img className="review-container-image" src={orbital} alt="Orbital" />
+        </NavLink>
         <h2 className="week-title">Week 1 Review</h2>
         <CardOne {...facts[page]} key={page} />
         <div className="button-container">
