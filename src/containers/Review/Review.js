@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { NavLink, withRouter } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { populateFacts } from '../../thunks';
 import orbital from '../../images/orbital-header.svg';
 import './Review.css';
 
 class Review extends Component {
   setReviewInfo = async () => {
-    const { populateFacts } = this.props;
-    await populateFacts();
+    await this.props.populateFacts();
   };
 
   render() {
     return (
       <div className="review-container">
         <img className="review-header-image" src={orbital} alt="Orbital" />
-        <h2 className="review-header">Review Sections</h2>
+        <h2 className="review-header">Weekly Reviews</h2>
         <div className="review-button-container">
           <button className="review-button" onClick={this.setReviewInfo}>
             <NavLink className="review-page-link" to="/review-one">
@@ -52,9 +51,7 @@ export const mapDispatchToProps = dispatch => ({
   populateFacts: () => dispatch(populateFacts())
 });
 
-export default withRouter(
-  connect(
-    null,
-    mapDispatchToProps
-  )(Review)
-);
+export default connect(
+  null,
+  mapDispatchToProps
+)(Review);

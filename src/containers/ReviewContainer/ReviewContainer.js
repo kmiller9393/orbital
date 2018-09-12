@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CardOne from '../../containers/CardOne/CardOne';
+import CardOne from '../CardOne/CardOne';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import orbital from '../../images/orbital-header.svg';
@@ -13,28 +13,16 @@ class ReviewContainer extends Component {
     };
   }
 
-  moveBack = () => {
+  navigateCard = e => {
     const { page } = this.state;
     const { history, facts } = this.props;
+    let newPage = page;
 
-    if (page < 1) {
-      return;
-    }
+    e.target.name === 'next' ? newPage++ : newPage--;
 
-    this.setState({ page: page - 1 });
-    history.replace(`/review-one/${facts[page].name}`);
-  };
-
-  moveForward = () => {
-    const { page } = this.state;
-    const { history, facts } = this.props;
-
-    if (page > 7) {
-      return;
-    }
-
-    this.setState({ page: page + 1 });
-    history.replace(`/review-one/${facts[page].name}`);
+    if (newPage < 0 || newPage > 8) return;
+    this.setState({ page: newPage });
+    history.replace(`/review-one/${facts[newPage].name}`);
   };
 
   render() {
@@ -47,12 +35,17 @@ class ReviewContainer extends Component {
         <h2 className="week-title">Week 1 Review</h2>
         <CardOne {...facts[page]} key={page} />
         <div className="button-container">
-          <button className="review-container-button" onClick={this.moveBack}>
+          <button
+            className="review-container-button"
+            onClick={this.navigateCard}
+            name="previous"
+          >
             Previous
           </button>
           <button
             className="review-container-button"
-            onClick={this.moveForward}
+            onClick={this.navigateCard}
+            name="next"
           >
             Next
           </button>
@@ -63,7 +56,7 @@ class ReviewContainer extends Component {
 }
 
 export const mapStateToProps = state => ({
-  facts: state.facts
+  facts: state.glossary
 });
 
 export default withRouter(
