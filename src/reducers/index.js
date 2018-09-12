@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
 import { populateReducer } from './populateReducer';
+import { triviaReducer } from './triviaReducer';
 
 const rootReducer = combineReducers({
-  facts: populateReducer
+  glossary: populateReducer,
+  triviaAnswers: triviaReducer
 });
 
 export default rootReducer;
