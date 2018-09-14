@@ -1,21 +1,32 @@
 import React, { Component } from 'react';
 import TriviaCard from '../TriviaCard/TriviaCard';
-import { NavLink, withRouter } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import orbital from '../../images/orbital-header.svg';
 import './TriviaContainer.css';
 
 class TriviaContainer extends Component {
+  constructor() {
+    super();
+    this.state = {
+      page: 0
+    };
+  }
+
   render() {
-    const answers = this.props.answers.map((answer, index) => {
+    const answers = this.props.triviaAnswers.map((subject, index) => {
       return (
         <TriviaCard
-          answer={Object.keys(answer)[0]}
-          question={Object.values(answer)[0]}
+          answer={subject.answer}
+          question={subject.question}
           key={index}
         />
       );
     });
+
+    const triviaQuestions = this.props.triviaAnswers.map(
+      subject => subject.question
+    );
 
     return (
       <div>
@@ -23,14 +34,20 @@ class TriviaContainer extends Component {
           <img className="trivia-container-image" src={orbital} alt="Orbital" />
         </NavLink>
         <h2 className="trivia-title">Week 1 Trivia</h2>
-        <div className="answers-container">{answers}</div>
+        <div className="answers-container">
+          <h3>What is {triviaQuestions[0]}?</h3>
+          {answers[0]}
+          {answers[1]}
+          {answers[2]}
+          {answers[3]}
+        </div>
       </div>
     );
   }
 }
 
 export const mapStateToProps = state => ({
-  answers: state.triviaAnswers
+  triviaAnswers: state.triviaAnswers
 });
 
 export default connect(
