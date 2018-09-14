@@ -1,6 +1,7 @@
 import { populatePage } from '../actions';
 import { populateTrivia } from '../actions';
 import { fetchSpaceFacts } from '../utils/apiCalls';
+import { cleanFacts } from '../utils/helper';
 
 export const populateFacts = () => {
   return async dispatch => {
@@ -14,18 +15,11 @@ export const populateFacts = () => {
   };
 };
 
-export const cleanFacts = () => {
+export const populateTriviaFacts = () => {
   return async dispatch => {
     try {
       const triviaItems = await fetchSpaceFacts();
-
-      const triviaAnswers = triviaItems.reduce((acc, item, index) => {
-        acc.push({
-          [item.name]: item.definition.split('.')[0],
-          id: index
-        });
-        return acc;
-      }, []);
+      const triviaAnswers = cleanFacts(triviaItems);
 
       dispatch(populateTrivia(triviaAnswers));
     } catch (error) {
