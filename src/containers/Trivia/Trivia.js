@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { cleanFacts } from '../../thunks';
+import { populateTriviaFacts } from '../../thunks';
 import orbital from '../../images/orbital-header.svg';
 import './Trivia.css';
 
@@ -50,7 +50,7 @@ class Trivia extends Component {
 }
 
 export const mapDispatchToProps = dispatch => ({
-  populateTrivia: () => dispatch(cleanFacts())
+  populateTrivia: () => dispatch(populateTriviaFacts())
 });
 
 export default connect(
