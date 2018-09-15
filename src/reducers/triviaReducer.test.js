@@ -11,7 +11,7 @@ describe('triviaReducer', () => {
 
   it('should return an array of modified glossary items (answers)', () => {
     const expected = mockTriviaItems;
-    const result = triviaReducer([], actions.populateTrivia(mockTriviaItems));
+    const result = triviaReducer([], actions.addTriviaSet(mockTriviaItems));
     expect(result).toEqual(expected);
   });
 });
