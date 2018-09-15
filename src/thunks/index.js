@@ -1,5 +1,5 @@
-import { populatePage } from '../actions';
-import { populateTrivia } from '../actions';
+import { addGlossary } from '../actions';
+import { addTriviaSet } from '../actions';
 import { fetchSpaceFacts } from '../utils/apiCalls';
 import { cleanFacts } from '../utils/helper';
 
@@ -8,7 +8,7 @@ export const populateFacts = () => {
     try {
       const facts = await fetchSpaceFacts();
       const factsWithId = facts.map((fact, i) => ({ ...fact, id: i }));
-      dispatch(populatePage(factsWithId));
+      dispatch(addGlossary(factsWithId));
     } catch (error) {
       throw new Error(error.message);
     }
@@ -21,7 +21,7 @@ export const populateTriviaFacts = () => {
       const triviaItems = await fetchSpaceFacts();
       const triviaAnswers = cleanFacts(triviaItems);
 
-      dispatch(populateTrivia(triviaAnswers));
+      dispatch(addTriviaSet(triviaAnswers));
     } catch (error) {
       throw new Error(error.message);
     }

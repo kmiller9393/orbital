@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CardOne from '../CardOne/CardOne';
+import ReviewCard from '../ReviewCard/ReviewCard';
 import { NavLink, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import orbital from '../../images/orbital-header.svg';
@@ -35,7 +35,7 @@ class ReviewContainer extends Component {
           <img className="review-container-image" src={orbital} alt="Orbital" />
         </NavLink>
         <h2 className="week-title">Week 1 Review</h2>
-        <CardOne {...facts[page]} key={page} />
+        <ReviewCard {...facts[page]} key={page} />
         <div className="button-container">
           <button
             className="review-container-button"
