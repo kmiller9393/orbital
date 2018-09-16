@@ -15,9 +15,28 @@ class TriviaContainer extends Component {
     };
   }
 
+  componentDidMount() {
+    if (this.props.history.location.pathname.includes('/trivia-two')) {
+      this.setState({ page: 9 });
+    }
+
+    if (this.props.history.location.pathname.includes('/trivia-three')) {
+      this.setState({ page: 18 });
+    }
+
+    if (this.props.history.location.pathname.includes('/trivia-four')) {
+      this.setState({ page: 28 });
+    }
+
+    if (this.props.history.location.pathname.includes('/trivia-five')) {
+      this.setState({ page: 38 });
+    }
+  }
+
   checkAnswer = e => {
     const { history, addScore, score, triviaAnswers } = this.props;
     const { page } = this.state;
+
     const answers = triviaAnswers.map(subject => subject.answer);
     let newPage = page;
 
@@ -25,10 +44,26 @@ class TriviaContainer extends Component {
       addScore(score);
     }
 
-    this.setState(
-      { page: newPage + 1 },
-      history.replace(`/trivia-one/${[newPage]}`)
-    );
+    this.setState({ page: newPage + 1 });
+
+    if (history.location.pathname.includes('/trivia-one')) {
+      history.replace(`/trivia-one/${[newPage]}`);
+    }
+
+    if (history.location.pathname.includes('/trivia-two')) {
+      history.replace(`/trivia-two/${[newPage]}`);
+    }
+    if (history.location.pathname.includes('/trivia-three')) {
+      history.replace(`/trivia-three/${[newPage]}`);
+    }
+
+    if (history.location.pathname.includes('/trivia-four')) {
+      history.replace(`/trivia-four/${[newPage]}`);
+    }
+
+    if (history.location.pathname.includes('/trivia-five')) {
+      history.replace(`/trivia-five/${[newPage]}`);
+    }
   };
 
   render() {
@@ -46,7 +81,7 @@ class TriviaContainer extends Component {
         <NavLink to="/">
           <img className="trivia-container-image" src={orbital} alt="Orbital" />
         </NavLink>
-        <h2 className="trivia-title">Week 1 Trivia</h2>
+        <h2 className="trivia-title">Weekly Trivia</h2>
         <div className="answers-container">
           <h3>What is {triviaQuestions[page]}?</h3>
           <div onClick={e => this.checkAnswer(e)}>
