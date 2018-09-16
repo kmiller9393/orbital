@@ -16,6 +16,10 @@ export default class App extends Component {
         <Route path="/review-one" component={ReviewContainer} />
         <Route exact path="/trivia-center" component={Trivia} />
         <Route path="/trivia-one" component={TriviaContainer} />
+        <Route path="/trivia-two" component={TriviaContainer} />
+        <Route path="/trivia-three" component={TriviaContainer} />
+        <Route path="/trivia-four" component={TriviaContainer} />
+        <Route path="/trivia-five" component={TriviaContainer} />
       </div>
     );
   }
