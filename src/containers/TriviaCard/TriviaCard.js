@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './TriviaCard.css';
 
 export default class TriviaCard extends Component {
@@ -10,3 +11,9 @@ export default class TriviaCard extends Component {
     );
   }
 }
+
+const { string } = PropTypes;
+TriviaCard.propTypes = {
+  name: string,
+  answer: string
+};
