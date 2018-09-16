@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReviewCard from '../ReviewCard/ReviewCard';
 import { NavLink, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import orbital from '../../images/orbital-header.svg';
 import './ReviewContainer.css';
 
@@ -67,3 +68,9 @@ export default withRouter(
     null
   )(ReviewContainer)
 );
+
+const { array, object } = PropTypes;
+ReviewContainer.propTypes = {
+  facts: array,
+  history: object
+};
