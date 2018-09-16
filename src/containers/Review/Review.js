@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { populateFacts } from '../../thunks';
+import PropTypes from 'prop-types';
 import orbital from '../../images/orbital-header.svg';
 import './Review.css';
 
@@ -57,3 +58,8 @@ export default connect(
   null,
   mapDispatchToProps
 )(Review);
+
+const { func } = PropTypes;
+Review.propTypes = {
+  populateFacts: func
+};
