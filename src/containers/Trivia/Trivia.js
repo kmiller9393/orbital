@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { populateTriviaFacts } from '../../thunks';
+import PropTypes from 'prop-types';
 import orbital from '../../images/orbital-header.svg';
 import './Trivia.css';
 
@@ -57,3 +58,8 @@ export default connect(
   null,
   mapDispatchToProps
 )(Trivia);
+
+const { func } = PropTypes;
+Trivia.propTypes = {
+  populateTrivia: func
+};
