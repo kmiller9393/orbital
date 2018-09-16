@@ -3,6 +3,7 @@ import TriviaCard from '../TriviaCard/TriviaCard';
 import { NavLink, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { addScore } from '../../actions';
+import PropTypes from 'prop-types';
 import orbital from '../../images/orbital-header.svg';
 import './TriviaContainer.css';
 
@@ -15,13 +16,13 @@ class TriviaContainer extends Component {
   }
 
   checkAnswer = e => {
-    const answers = this.props.triviaAnswers.map(subject => subject.answer);
+    const { history, addScore, score, triviaAnswers } = this.props;
     const { page } = this.state;
-    const { history } = this.props;
+    const answers = triviaAnswers.map(subject => subject.answer);
     let newPage = page;
 
     if (e.target.innerText === answers[newPage]) {
-      this.props.addScore(this.props.score);
+      addScore(score);
     }
 
     this.setState(
@@ -32,14 +33,13 @@ class TriviaContainer extends Component {
 
   render() {
     const { page } = this.state;
+    const { triviaAnswers } = this.props;
 
-    const answers = this.props.triviaAnswers.map(subject => {
+    const answers = triviaAnswers.map(subject => {
       return <TriviaCard {...subject} key={subject.id} name={subject.answer} />;
     });
 
-    const triviaQuestions = this.props.triviaAnswers.map(
-      subject => subject.question
-    );
+    const triviaQuestions = triviaAnswers.map(subject => subject.question);
 
     return (
       <div>
@@ -80,3 +80,11 @@ export default withRouter(
     mapDispatchToProps
   )(TriviaContainer)
 );
+
+const { array, object, func, number } = PropTypes;
+TriviaContainer.propTypes = {
+  triviaAnswers: array,
+  history: object,
+  addScore: func,
+  score: number
+};
