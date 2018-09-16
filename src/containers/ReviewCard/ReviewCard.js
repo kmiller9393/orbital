@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './ReviewCard.css';
 
 class ReviewCard extends Component {
@@ -10,20 +11,22 @@ class ReviewCard extends Component {
   }
 
   render() {
+    const { toggle } = this.state;
+    const { name, definition } = this.props;
+
     return (
-      <div
-        onClick={() => this.setState({ toggle: !this.state.toggle })}
-        className="Card"
-      >
-        <p className={!this.state.toggle ? 'card-title' : 'card-title-toggle'}>
-          {this.props.name}
-        </p>
-        <p className="card-body">
-          {this.state.toggle && this.props.definition}
-        </p>
+      <div onClick={() => this.setState({ toggle: !toggle })} className="Card">
+        <p className={!toggle ? 'card-title' : 'card-title-toggle'}>{name}</p>
+        <p className="card-body">{toggle && definition}</p>
       </div>
     );
   }
 }
 
 export default ReviewCard;
+
+const { string } = PropTypes;
+ReviewCard.propTypes = {
+  name: string,
+  definition: string
+};
