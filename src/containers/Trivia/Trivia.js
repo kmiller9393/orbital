@@ -8,7 +8,8 @@ import './Trivia.css';
 
 class Trivia extends Component {
   setTriviaInfo = async () => {
-    await this.props.populateTrivia();
+    const { populateTrivia } = this.props;
+    await populateTrivia();
   };
 
   render() {
@@ -24,22 +25,22 @@ class Trivia extends Component {
               Week 1
             </NavLink>
           </button>
-          <button className="trivia-button">
+          <button className="trivia-button" onClick={this.setTriviaInfo}>
             <NavLink className="trivia-page-link" to="/trivia-two">
               Week 2
             </NavLink>
           </button>
-          <button className="trivia-button">
+          <button className="trivia-button" onClick={this.setTriviaInfo}>
             <NavLink className="trivia-page-link" to="/trivia-three">
               Week 3
             </NavLink>
           </button>
-          <button className="trivia-button">
+          <button className="trivia-button" onClick={this.setTriviaInfo}>
             <NavLink className="trivia-page-link" to="/trivia-four">
               Week 4
             </NavLink>
           </button>
-          <button className="trivia-button">
+          <button className="trivia-button" onClick={this.setTriviaInfo}>
             <NavLink className="trivia-page-link" to="/trivia-five">
               Week 5
             </NavLink>
@@ -59,7 +60,8 @@ export default connect(
   mapDispatchToProps
 )(Trivia);
 
-const { func } = PropTypes;
+const { func, object } = PropTypes;
 Trivia.propTypes = {
-  populateTrivia: func
+  populateTrivia: func,
+  history: object
 };
