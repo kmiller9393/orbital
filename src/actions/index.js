@@ -12,3 +12,8 @@ export const addScore = score => ({
   type: 'ADD_SCORE',
   score
 });
+
+export const resetScore = score => ({
+  type: 'RESET_SCORE',
+  score
+});
