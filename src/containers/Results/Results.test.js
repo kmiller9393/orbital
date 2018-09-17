@@ -1,8 +1,20 @@
-import Results, { mapDispatchToProps, mapStateToProps } from './Results';
+import React from 'react';
+import { shallow } from 'enzyme';
+import { Results, mapDispatchToProps, mapStateToProps } from './Results';
 import { resetScore } from '../../actions';
 
 describe('Results', () => {
-  describe('Results component', () => {});
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<Results />);
+  });
+
+  describe('Results component', () => {
+    it('should match the snapshot', () => {
+      expect(wrapper).toMatchSnapshot();
+    });
+  });
 
   describe('mapStateToProps', () => {
     it('should return an array of triviaAnswer objects and the score', () => {
