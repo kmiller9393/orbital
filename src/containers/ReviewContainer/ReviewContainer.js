@@ -13,7 +13,7 @@ import PropTypes from 'prop-types';
 import orbital from '../../images/orbital-header.svg';
 import './ReviewContainer.css';
 
-class ReviewContainer extends Component {
+export class ReviewContainer extends Component {
   constructor() {
     super();
     this.state = {
@@ -25,31 +25,31 @@ class ReviewContainer extends Component {
 
   componentDidMount() {
     const { glossary } = this.props;
-    const { pathname } = this.props.history.location;
+    // const { pathname } = this.props.history.location;
     const { ready } = this.state;
     let reviewItems;
 
-    if (pathname.includes('/review-one')) {
+    if (this.props.history.location.pathname.includes('/review-one')) {
       reviewItems = addReviewOne(glossary);
       this.setState({ reviewItems, ready: !ready });
     }
 
-    if (pathname.includes('/review-two')) {
+    if (this.props.history.location.pathname.includes('/review-two')) {
       reviewItems = addReviewTwo(glossary);
       this.setState({ reviewItems, ready: !ready });
     }
 
-    if (pathname.includes('/review-three')) {
+    if (this.props.history.location.pathname.includes('/review-three')) {
       reviewItems = addReviewThree(glossary);
       this.setState({ reviewItems, ready: !ready });
     }
 
-    if (pathname.includes('/review-four')) {
+    if (this.props.history.location.pathname.includes('/review-four')) {
       reviewItems = addReviewFour(glossary);
       this.setState({ reviewItems, ready: !ready });
     }
 
-    if (pathname.includes('/review-five')) {
+    if (this.props.history.location.pathname.includes('/review-five')) {
       reviewItems = addReviewFive(glossary);
       this.setState({ reviewItems, ready: !ready });
     }
@@ -58,7 +58,7 @@ class ReviewContainer extends Component {
   navigateCard = e => {
     const { page, reviewItems } = this.state;
     const { history } = this.props;
-    const { pathname } = this.props.history.location;
+    // const { pathname } = this.props.history.location;
     let newPage = page;
 
     e.target.name === 'next' ? newPage++ : newPage--;
@@ -69,23 +69,23 @@ class ReviewContainer extends Component {
 
     this.setState({ page: newPage });
 
-    if (pathname.includes('/review-one')) {
+    if (this.props.history.location.pathname.includes('/review-one')) {
       history.replace(`/review-one/${reviewItems[newPage].name}`);
     }
 
-    if (pathname.includes('/review-two')) {
+    if (this.props.history.location.pathname.includes('/review-two')) {
       history.replace(`/review-two/${reviewItems[newPage].name}`);
     }
 
-    if (pathname.includes('/review-three')) {
+    if (this.props.history.location.pathname.includes('/review-three')) {
       history.replace(`/review-three/${reviewItems[newPage].name}`);
     }
 
-    if (pathname.includes('/review-four')) {
+    if (this.props.history.location.pathname.includes('/review-four')) {
       history.replace(`/review-four/${reviewItems[newPage].name}`);
     }
 
-    if (pathname.includes('/review-five')) {
+    if (this.props.history.location.pathname.includes('/review-five')) {
       history.replace(`/review-five/${reviewItems[newPage].name}`);
     }
   };
