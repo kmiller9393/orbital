@@ -4,9 +4,10 @@ import './TriviaCard.css';
 
 export default class TriviaCard extends Component {
   render() {
+    const { answer, name } = this.props;
     return (
-      <div className="trivia-choice" name={this.props.name}>
-        {this.props.answer}
+      <div className="trivia-choice" name={name}>
+        {answer}
       </div>
     );
   }
