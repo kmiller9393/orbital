@@ -4,6 +4,7 @@ import Review from '../../containers/Review/Review';
 import ReviewContainer from '../../containers/ReviewContainer/ReviewContainer';
 import TriviaContainer from '../../containers/TriviaContainer/TriviaContainer';
 import Trivia from '../../containers/Trivia/Trivia';
+import Results from '../../containers/Results/Results';
 import { Route } from 'react-router-dom';
 import './App.css';
 
@@ -24,6 +25,7 @@ export default class App extends Component {
         <Route path="/trivia-three" component={TriviaContainer} />
         <Route path="/trivia-four" component={TriviaContainer} />
         <Route path="/trivia-five" component={TriviaContainer} />
+        <Route path="/results" component={Results} />
       </div>
     );
   }
