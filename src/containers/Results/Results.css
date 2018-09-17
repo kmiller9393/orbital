@@ -12,8 +12,11 @@
   color: #f7f7f7;
   font-size: 1.4rem; }
 
-span {
+.high-score {
   color: #00da59; }
+
+.low-score {
+  color: #c90000; }
 
 .score-container {
   margin-top: 10rem; }

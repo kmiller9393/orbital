@@ -17,7 +17,10 @@ class Review extends Component {
         <div className="score-container">
           <h1 className="results-header">Your Results</h1>
           <p className="score">
-            Score: <span>{((score / 9) * 100).toFixed(2)}%</span>
+            Score:{' '}
+            <span className={score > 0.7 ? 'high-score' : 'low-score'}>
+              {((score / 9) * 100).toFixed(2)}%
+            </span>
           </p>
         </div>
       </div>
