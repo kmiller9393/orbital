@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReviewCard from '../ReviewCard/ReviewCard';
+import ReviewCard from '../../components/ReviewCard/ReviewCard';
 import { NavLink, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import {
