@@ -3,7 +3,7 @@ import { addTriviaSet } from '../actions';
 import { fetchSpaceFacts } from '../utils/apiCalls';
 import { cleanFacts } from '../utils/helper';
 
-export const populateFacts = () => {
+export const populateReview = () => {
   return async dispatch => {
     try {
       const facts = await fetchSpaceFacts();
