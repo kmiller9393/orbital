@@ -1,0 +1,33 @@
+.trivia-header-image {
+  height: 55px;
+  margin-top: 1.5rem;
+  width: 125px; }
+
+.trivia-header {
+  color: #f7f7f7;
+  margin-top: 2.5rem; }
+
+.trivia-container {
+  font-family: 'Chalkboard SE', 'Times New Roman', serif;
+  align-items: center;
+  display: flex;
+  flex-direction: column; }
+
+.trivia-button {
+  background-color: #009c92;
+  border-color: #009c92;
+  border-radius: 5px;
+  height: 45px;
+  margin-bottom: 1rem;
+  width: 175px; }
+
+.trivia-page-link {
+  color: #f7f7f7;
+  font-size: 1.3rem;
+  text-decoration: none; }
+
+.trivia-button-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem; }
