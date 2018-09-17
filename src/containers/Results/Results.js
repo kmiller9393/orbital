@@ -2,10 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { resetScore } from '../../actions';
+import PropTypes from 'prop-types';
 import orbital from '../../images/orbital-header.svg';
 import './Results.css';
 
-class Review extends Component {
+class Results extends Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
   render() {
     const { score, resetScore } = this.props;
 
@@ -29,6 +34,7 @@ class Review extends Component {
 }
 
 export const mapStateToProps = state => ({
+  triviaAnswers: state.triviaAnswers,
   score: state.score
 });
 
@@ -39,4 +45,11 @@ export const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Review);
+)(Results);
+
+const { array, number, func } = PropTypes;
+Results.propTypes = {
+  triviaAnswers: array,
+  score: number,
+  resetScore: func
+};

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TriviaCard from '../TriviaCard/TriviaCard';
+import TriviaCard from '../../components/TriviaCard/TriviaCard';
 import { NavLink, withRouter } from 'react-router-dom';
 import {
   addTriviaOne,
