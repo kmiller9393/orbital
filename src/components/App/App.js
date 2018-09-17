@@ -14,6 +14,10 @@ export default class App extends Component {
         <Route exact path="/" component={Home} />
         <Route exact path="/review" component={Review} />
         <Route path="/review-one" component={ReviewContainer} />
+        <Route path="/review-two" component={ReviewContainer} />
+        <Route path="/review-three" component={ReviewContainer} />
+        <Route path="/review-four" component={ReviewContainer} />
+        <Route path="/review-five" component={ReviewContainer} />
         <Route exact path="/trivia-center" component={Trivia} />
         <Route path="/trivia-one" component={TriviaContainer} />
         <Route path="/trivia-two" component={TriviaContainer} />

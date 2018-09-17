@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import TriviaCard from '../TriviaCard/TriviaCard';
 import { NavLink, withRouter } from 'react-router-dom';
+import {
+  addTriviaOne,
+  addTriviaTwo,
+  addTriviaThree,
+  addTriviaFour,
+  addTriviaFive
+} from '../../utils/helper';
 import { connect } from 'react-redux';
 import { addScore } from '../../actions';
 import PropTypes from 'prop-types';
@@ -11,33 +18,48 @@ class TriviaContainer extends Component {
   constructor() {
     super();
     this.state = {
-      page: 0
+      page: 0,
+      triviaItems: [],
+      ready: false
     };
   }
 
   componentDidMount() {
-    if (this.props.history.location.pathname.includes('/trivia-two')) {
-      this.setState({ page: 9 });
+    const { triviaAnswers, history } = this.props;
+    const { ready } = this.state;
+    let triviaItems;
+
+    if (history.location.pathname.includes('/trivia-one')) {
+      triviaItems = addTriviaOne(triviaAnswers);
+      this.setState({ triviaItems, ready: !ready });
     }
 
-    if (this.props.history.location.pathname.includes('/trivia-three')) {
-      this.setState({ page: 18 });
+    if (history.location.pathname.includes('/trivia-two')) {
+      triviaItems = addTriviaTwo(triviaAnswers);
+      this.setState({ triviaItems, ready: !ready });
     }
 
-    if (this.props.history.location.pathname.includes('/trivia-four')) {
-      this.setState({ page: 28 });
+    if (history.location.pathname.includes('/trivia-three')) {
+      triviaItems = addTriviaThree(triviaAnswers);
+      this.setState({ triviaItems, ready: !ready });
     }
 
-    if (this.props.history.location.pathname.includes('/trivia-five')) {
-      this.setState({ page: 38 });
+    if (history.location.pathname.includes('/trivia-four')) {
+      triviaItems = addTriviaFour(triviaAnswers);
+      this.setState({ triviaItems, ready: !ready });
+    }
+
+    if (history.location.pathname.includes('/trivia-five')) {
+      triviaItems = addTriviaFive(triviaAnswers);
+      this.setState({ triviaItems, ready: !ready });
     }
   }
 
   checkAnswer = e => {
-    const { history, addScore, score, triviaAnswers } = this.props;
-    const { page } = this.state;
+    const { history, addScore, score } = this.props;
+    const { page, triviaItems } = this.state;
 
-    const answers = triviaAnswers.map(subject => subject.answer);
+    const answers = triviaItems.map(subject => subject.answer);
     let newPage = page;
 
     if (e.target.innerText === answers[newPage]) {
@@ -67,14 +89,11 @@ class TriviaContainer extends Component {
   };
 
   render() {
-    const { page } = this.state;
+    const { page, triviaItems, ready } = this.state;
     const { triviaAnswers } = this.props;
-
     const answers = triviaAnswers.map(subject => {
-      return <TriviaCard {...subject} key={subject.id} name={subject.answer} />;
+      return <TriviaCard {...subject} key={subject.id} />;
     });
-
-    const triviaQuestions = triviaAnswers.map(subject => subject.question);
 
     return (
       <div>
@@ -82,12 +101,17 @@ class TriviaContainer extends Component {
           <img className="trivia-container-image" src={orbital} alt="Orbital" />
         </NavLink>
         <h2 className="trivia-title">Weekly Trivia</h2>
+
         <div className="answers-container">
-          <h3>What is {triviaQuestions[page]}?</h3>
+          {ready && <h3>What is {triviaItems[page].question}?</h3>}
           <div onClick={e => this.checkAnswer(e)}>
             {answers[Math.floor(Math.random() * 46)]}
           </div>
-          <div onClick={e => this.checkAnswer(e)}>{answers[page]}</div>
+          {ready && (
+            <div onClick={e => this.checkAnswer(e)} className="trivia-card">
+              {triviaItems[page].answer}
+            </div>
+          )}
           <div onClick={e => this.checkAnswer(e)}>
             {answers[Math.floor(Math.random() * 46)]}
           </div>

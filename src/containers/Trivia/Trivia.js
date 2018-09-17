@@ -1,17 +1,11 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { populateTriviaFacts } from '../../thunks';
 import PropTypes from 'prop-types';
 import orbital from '../../images/orbital-header.svg';
 import './Trivia.css';
 
 class Trivia extends Component {
-  setTriviaInfo = async () => {
-    const { populateTrivia } = this.props;
-    await populateTrivia();
-  };
-
   render() {
     return (
       <div className="trivia-container">
@@ -20,28 +14,28 @@ class Trivia extends Component {
         </NavLink>
         <h2 className="trivia-header">Trivia Center</h2>
         <div className="trivia-button-container">
-          <button className="trivia-button" onClick={this.setTriviaInfo}>
-            <NavLink className="trivia-page-link" to="/trivia-one">
+          <button className="trivia-button">
+            <NavLink className="trivia-page-link" to="/trivia-one" name="1">
               Week 1
             </NavLink>
           </button>
-          <button className="trivia-button" onClick={this.setTriviaInfo}>
-            <NavLink className="trivia-page-link" to="/trivia-two">
+          <button className="trivia-button" onClick={this.addTriviaTwo}>
+            <NavLink className="trivia-page-link" to="/trivia-two" name="2">
               Week 2
             </NavLink>
           </button>
-          <button className="trivia-button" onClick={this.setTriviaInfo}>
-            <NavLink className="trivia-page-link" to="/trivia-three">
+          <button className="trivia-button" onClick={this.addTriviaThree}>
+            <NavLink className="trivia-page-link" to="/trivia-three" name="3">
               Week 3
             </NavLink>
           </button>
-          <button className="trivia-button" onClick={this.setTriviaInfo}>
-            <NavLink className="trivia-page-link" to="/trivia-four">
+          <button className="trivia-button" onClick={this.addTriviaFour}>
+            <NavLink className="trivia-page-link" to="/trivia-four" name="4">
               Week 4
             </NavLink>
           </button>
-          <button className="trivia-button" onClick={this.setTriviaInfo}>
-            <NavLink className="trivia-page-link" to="/trivia-five">
+          <button className="trivia-button" onClick={this.addTriviaFive}>
+            <NavLink className="trivia-page-link" to="/trivia-five" name="5">
               Week 5
             </NavLink>
           </button>
@@ -51,13 +45,13 @@ class Trivia extends Component {
   }
 }
 
-export const mapDispatchToProps = dispatch => ({
-  populateTrivia: () => dispatch(populateTriviaFacts())
+export const mapStateToProps = state => ({
+  triviaAnswers: state.triviaAnswers
 });
 
 export default connect(
-  null,
-  mapDispatchToProps
+  mapStateToProps,
+  null
 )(Trivia);
 
 const { func, object } = PropTypes;

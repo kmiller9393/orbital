@@ -21,7 +21,10 @@ class ReviewContainer extends Component {
 
     e.target.name === 'next' ? newPage++ : newPage--;
 
-    if (newPage < 0 || newPage > 8) return;
+    if (newPage < 0 || newPage > 8) {
+      return;
+    }
+
     this.setState({ page: newPage });
     history.replace(`/review-one/${facts[newPage].name}`);
   };
@@ -35,7 +38,7 @@ class ReviewContainer extends Component {
         <NavLink to="/">
           <img className="review-container-image" src={orbital} alt="Orbital" />
         </NavLink>
-        <h2 className="week-title">Week 1 Review</h2>
+        <h2 className="week-title">Weekly Review</h2>
         <ReviewCard {...facts[page]} key={page} />
         <div className="button-container">
           <button
