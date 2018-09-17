@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { populateTriviaFacts } from '../../thunks';
 import orbital from '../../images/orbital-header.svg';
 import './Home.css';
 
-export default class Home extends Component {
+class Home extends Component {
+  setTriviaItems = async () => {
+    const { populateTrivia } = this.props;
+    await populateTrivia();
+  };
+
   render() {
     return (
       <div>
@@ -18,7 +25,11 @@ export default class Home extends Component {
             </NavLink>
           </button>
           <button className="home-button">
-            <NavLink className="review-link" to="/trivia-center">
+            <NavLink
+              className="review-link"
+              to="/trivia-center"
+              onClick={this.setTriviaItems}
+            >
               Trivia Center
             </NavLink>
           </button>
@@ -27,3 +38,12 @@ export default class Home extends Component {
     );
   }
 }
+
+export const mapDispatchToProps = dispatch => ({
+  populateTrivia: () => dispatch(populateTriviaFacts())
+});
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Home);
