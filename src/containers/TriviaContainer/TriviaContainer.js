@@ -66,6 +66,10 @@ class TriviaContainer extends Component {
       addScore(score);
     }
 
+    if (history.location.pathname.includes(triviaItems.length - 2)) {
+      history.push('/results');
+    }
+
     this.setState({ page: newPage + 1 });
 
     if (history.location.pathname.includes('/trivia-one')) {

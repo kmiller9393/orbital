@@ -26,11 +26,11 @@ export const addTriviaThree = triviaSet => {
 };
 
 export const addTriviaFour = triviaSet => {
-  const fourthTriviaSet = triviaSet.slice(27, 37);
+  const fourthTriviaSet = triviaSet.slice(27, 36);
   return fourthTriviaSet;
 };
 
 export const addTriviaFive = triviaSet => {
-  const fifthTriviaSet = triviaSet.slice(37, 47);
+  const fifthTriviaSet = triviaSet.slice(36, 45);
   return fifthTriviaSet;
 };
