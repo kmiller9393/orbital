@@ -7,7 +7,7 @@ import { populateReview } from '../../thunks/populateReview';
 import orbital from '../../images/orbital-header.svg';
 import './Home.css';
 
-class Home extends Component {
+export class Home extends Component {
   setTriviaItems = async () => {
     const { populateTrivia } = this.props;
     await populateTrivia();
