@@ -14,7 +14,7 @@ import PropTypes from 'prop-types';
 import orbital from '../../images/orbital-header.svg';
 import './TriviaContainer.css';
 
-class TriviaContainer extends Component {
+export class TriviaContainer extends Component {
   constructor() {
     super();
     this.state = {
