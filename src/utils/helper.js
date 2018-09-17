@@ -9,3 +9,28 @@ export const cleanFacts = triviaFacts => {
   }, []);
   return triviaAnswers;
 };
+
+export const addTriviaOne = triviaSet => {
+  const firstTriviaSet = triviaSet.slice(0, 9);
+  return firstTriviaSet;
+};
+
+export const addTriviaTwo = triviaSet => {
+  const secondTriviaSet = triviaSet.slice(9, 18);
+  return secondTriviaSet;
+};
+
+export const addTriviaThree = triviaSet => {
+  const thirdTriviaSet = triviaSet.slice(18, 27);
+  return thirdTriviaSet;
+};
+
+export const addTriviaFour = triviaSet => {
+  const fourthTriviaSet = triviaSet.slice(27, 37);
+  return fourthTriviaSet;
+};
+
+export const addTriviaFive = triviaSet => {
+  const fifthTriviaSet = triviaSet.slice(37, 47);
+  return fifthTriviaSet;
+};
