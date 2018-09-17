@@ -25,31 +25,32 @@ class TriviaContainer extends Component {
   }
 
   componentDidMount() {
-    const { triviaAnswers, history } = this.props;
+    const { triviaAnswers } = this.props;
+    const { pathname } = this.props.history.location;
     const { ready } = this.state;
     let triviaItems;
 
-    if (history.location.pathname.includes('/trivia-one')) {
+    if (pathname.includes('/trivia-one')) {
       triviaItems = addTriviaOne(triviaAnswers);
       this.setState({ triviaItems, ready: !ready });
     }
 
-    if (history.location.pathname.includes('/trivia-two')) {
+    if (pathname.includes('/trivia-two')) {
       triviaItems = addTriviaTwo(triviaAnswers);
       this.setState({ triviaItems, ready: !ready });
     }
 
-    if (history.location.pathname.includes('/trivia-three')) {
+    if (pathname.includes('/trivia-three')) {
       triviaItems = addTriviaThree(triviaAnswers);
       this.setState({ triviaItems, ready: !ready });
     }
 
-    if (history.location.pathname.includes('/trivia-four')) {
+    if (pathname.includes('/trivia-four')) {
       triviaItems = addTriviaFour(triviaAnswers);
       this.setState({ triviaItems, ready: !ready });
     }
 
-    if (history.location.pathname.includes('/trivia-five')) {
+    if (pathname.includes('/trivia-five')) {
       triviaItems = addTriviaFive(triviaAnswers);
       this.setState({ triviaItems, ready: !ready });
     }
@@ -66,28 +67,28 @@ class TriviaContainer extends Component {
       addScore(score);
     }
 
-    if (history.location.pathname.includes(triviaItems.length - 2)) {
+    if (this.props.history.location.pathname.includes(triviaItems.length - 2)) {
       history.push('/results');
     }
 
     this.setState({ page: newPage + 1 });
 
-    if (history.location.pathname.includes('/trivia-one')) {
+    if (this.props.history.location.pathname.includes('/trivia-one')) {
       history.replace(`/trivia-one/${[newPage]}`);
     }
 
-    if (history.location.pathname.includes('/trivia-two')) {
+    if (this.props.history.location.pathname.includes('/trivia-two')) {
       history.replace(`/trivia-two/${[newPage]}`);
     }
-    if (history.location.pathname.includes('/trivia-three')) {
+    if (this.props.history.location.pathname.includes('/trivia-three')) {
       history.replace(`/trivia-three/${[newPage]}`);
     }
 
-    if (history.location.pathname.includes('/trivia-four')) {
+    if (this.props.history.location.pathname.includes('/trivia-four')) {
       history.replace(`/trivia-four/${[newPage]}`);
     }
 
-    if (history.location.pathname.includes('/trivia-five')) {
+    if (this.props.history.location.pathname.includes('/trivia-five')) {
       history.replace(`/trivia-five/${[newPage]}`);
     }
   };

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { populateTriviaFacts } from '../../thunks';
+import { populateReview } from '../../thunks';
 import orbital from '../../images/orbital-header.svg';
 import './Home.css';
 
@@ -9,6 +10,11 @@ class Home extends Component {
   setTriviaItems = async () => {
     const { populateTrivia } = this.props;
     await populateTrivia();
+  };
+
+  setReviewItems = async () => {
+    const { populateReview } = this.props;
+    await populateReview();
   };
 
   render() {
@@ -20,7 +26,11 @@ class Home extends Component {
         </header>
         <div className="homepage-buttons">
           <button className="home-button">
-            <NavLink className="review-link" to="/review">
+            <NavLink
+              className="review-link"
+              to="/review"
+              onClick={this.setReviewItems}
+            >
               Review
             </NavLink>
           </button>
@@ -40,7 +50,8 @@ class Home extends Component {
 }
 
 export const mapDispatchToProps = dispatch => ({
-  populateTrivia: () => dispatch(populateTriviaFacts())
+  populateTrivia: () => dispatch(populateTriviaFacts()),
+  populateReview: () => dispatch(populateReview())
 });
 
 export default connect(

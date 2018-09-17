@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import ReviewCard from '../ReviewCard/ReviewCard';
 import { NavLink, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import {
+  addReviewOne,
+  addReviewTwo,
+  addReviewThree,
+  addReviewFour,
+  addReviewFive
+} from '../../utils/helper';
 import PropTypes from 'prop-types';
 import orbital from '../../images/orbital-header.svg';
 import './ReviewContainer.css';
@@ -10,28 +17,81 @@ class ReviewContainer extends Component {
   constructor() {
     super();
     this.state = {
-      page: 0
+      page: 0,
+      reviewItems: [],
+      ready: false
     };
   }
 
+  componentDidMount() {
+    const { glossary } = this.props;
+    const { pathname } = this.props.history.location;
+    const { ready } = this.state;
+    let reviewItems;
+
+    if (pathname.includes('/review-one')) {
+      reviewItems = addReviewOne(glossary);
+      this.setState({ reviewItems, ready: !ready });
+    }
+
+    if (pathname.includes('/review-two')) {
+      reviewItems = addReviewTwo(glossary);
+      this.setState({ reviewItems, ready: !ready });
+    }
+
+    if (pathname.includes('/review-three')) {
+      reviewItems = addReviewThree(glossary);
+      this.setState({ reviewItems, ready: !ready });
+    }
+
+    if (pathname.includes('/review-four')) {
+      reviewItems = addReviewFour(glossary);
+      this.setState({ reviewItems, ready: !ready });
+    }
+
+    if (pathname.includes('/review-five')) {
+      reviewItems = addReviewFive(glossary);
+      this.setState({ reviewItems, ready: !ready });
+    }
+  }
+
   navigateCard = e => {
-    const { page } = this.state;
-    const { history, facts } = this.props;
+    const { page, reviewItems } = this.state;
+    const { history } = this.props;
+    const { pathname } = this.props.history.location;
     let newPage = page;
 
     e.target.name === 'next' ? newPage++ : newPage--;
 
-    if (newPage < 0 || newPage > 8) {
+    if (newPage < 0 || newPage > reviewItems.length - 1) {
       return;
     }
 
     this.setState({ page: newPage });
-    history.replace(`/review-one/${facts[newPage].name}`);
+
+    if (pathname.includes('/review-one')) {
+      history.replace(`/review-one/${reviewItems[newPage].name}`);
+    }
+
+    if (pathname.includes('/review-two')) {
+      history.replace(`/review-two/${reviewItems[newPage].name}`);
+    }
+
+    if (pathname.includes('/review-three')) {
+      history.replace(`/review-three/${reviewItems[newPage].name}`);
+    }
+
+    if (pathname.includes('/review-four')) {
+      history.replace(`/review-four/${reviewItems[newPage].name}`);
+    }
+
+    if (pathname.includes('/review-five')) {
+      history.replace(`/review-five/${reviewItems[newPage].name}`);
+    }
   };
 
   render() {
-    const { page } = this.state;
-    const { facts } = this.props;
+    const { page, reviewItems, ready } = this.state;
 
     return (
       <div>
@@ -39,7 +99,7 @@ class ReviewContainer extends Component {
           <img className="review-container-image" src={orbital} alt="Orbital" />
         </NavLink>
         <h2 className="week-title">Weekly Review</h2>
-        <ReviewCard {...facts[page]} key={page} />
+        {ready && <ReviewCard {...reviewItems[page]} key={page} />}
         <div className="button-container">
           <button
             className="review-container-button"
@@ -62,7 +122,7 @@ class ReviewContainer extends Component {
 }
 
 export const mapStateToProps = state => ({
-  facts: state.glossary
+  glossary: state.glossary
 });
 
 export default withRouter(
@@ -74,6 +134,6 @@ export default withRouter(
 
 const { array, object } = PropTypes;
 ReviewContainer.propTypes = {
-  facts: array,
+  glossary: array,
   history: object
 };
