@@ -1,0 +1,827 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Trivia should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Trivia />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <NavLink
+          activeClassName="active"
+          aria-current="page"
+          to="/"
+>
+          <img
+                    alt="Orbital"
+                    className="trivia-header-image"
+                    src="orbital-header.svg"
+          />
+</NavLink>,
+        <h2
+          className="trivia-header"
+>
+          Trivia Center
+</h2>,
+        <div
+          className="trivia-button-container"
+>
+          <button
+                    className="trivia-button"
+          >
+                    <NavLink
+                              activeClassName="active"
+                              aria-current="page"
+                              className="trivia-page-link"
+                              name="1"
+                              to="/trivia-one"
+                    >
+                              Week 1
+                    </NavLink>
+          </button>
+          <button
+                    className="trivia-button"
+          >
+                    <NavLink
+                              activeClassName="active"
+                              aria-current="page"
+                              className="trivia-page-link"
+                              name="2"
+                              to="/trivia-two"
+                    >
+                              Week 2
+                    </NavLink>
+          </button>
+          <button
+                    className="trivia-button"
+          >
+                    <NavLink
+                              activeClassName="active"
+                              aria-current="page"
+                              className="trivia-page-link"
+                              name="3"
+                              to="/trivia-three"
+                    >
+                              Week 3
+                    </NavLink>
+          </button>
+          <button
+                    className="trivia-button"
+          >
+                    <NavLink
+                              activeClassName="active"
+                              aria-current="page"
+                              className="trivia-page-link"
+                              name="4"
+                              to="/trivia-four"
+                    >
+                              Week 4
+                    </NavLink>
+          </button>
+          <button
+                    className="trivia-button"
+          >
+                    <NavLink
+                              activeClassName="active"
+                              aria-current="page"
+                              className="trivia-page-link"
+                              name="5"
+                              to="/trivia-five"
+                    >
+                              Week 5
+                    </NavLink>
+          </button>
+</div>,
+      ],
+      "className": "trivia-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "activeClassName": "active",
+          "aria-current": "page",
+          "children": <img
+            alt="Orbital"
+            className="trivia-header-image"
+            src="orbital-header.svg"
+/>,
+          "to": "/",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "Orbital",
+            "className": "trivia-header-image",
+            "src": "orbital-header.svg",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Trivia Center",
+          "className": "trivia-header",
+        },
+        "ref": null,
+        "rendered": "Trivia Center",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <button
+              className="trivia-button"
+>
+              <NavLink
+                            activeClassName="active"
+                            aria-current="page"
+                            className="trivia-page-link"
+                            name="1"
+                            to="/trivia-one"
+              >
+                            Week 1
+              </NavLink>
+</button>,
+            <button
+              className="trivia-button"
+>
+              <NavLink
+                            activeClassName="active"
+                            aria-current="page"
+                            className="trivia-page-link"
+                            name="2"
+                            to="/trivia-two"
+              >
+                            Week 2
+              </NavLink>
+</button>,
+            <button
+              className="trivia-button"
+>
+              <NavLink
+                            activeClassName="active"
+                            aria-current="page"
+                            className="trivia-page-link"
+                            name="3"
+                            to="/trivia-three"
+              >
+                            Week 3
+              </NavLink>
+</button>,
+            <button
+              className="trivia-button"
+>
+              <NavLink
+                            activeClassName="active"
+                            aria-current="page"
+                            className="trivia-page-link"
+                            name="4"
+                            to="/trivia-four"
+              >
+                            Week 4
+              </NavLink>
+</button>,
+            <button
+              className="trivia-button"
+>
+              <NavLink
+                            activeClassName="active"
+                            aria-current="page"
+                            className="trivia-page-link"
+                            name="5"
+                            to="/trivia-five"
+              >
+                            Week 5
+              </NavLink>
+</button>,
+          ],
+          "className": "trivia-button-container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <NavLink
+                activeClassName="active"
+                aria-current="page"
+                className="trivia-page-link"
+                name="1"
+                to="/trivia-one"
+>
+                Week 1
+</NavLink>,
+              "className": "trivia-button",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
+                "children": "Week 1",
+                "className": "trivia-page-link",
+                "name": "1",
+                "to": "/trivia-one",
+              },
+              "ref": null,
+              "rendered": "Week 1",
+              "type": [Function],
+            },
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <NavLink
+                activeClassName="active"
+                aria-current="page"
+                className="trivia-page-link"
+                name="2"
+                to="/trivia-two"
+>
+                Week 2
+</NavLink>,
+              "className": "trivia-button",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
+                "children": "Week 2",
+                "className": "trivia-page-link",
+                "name": "2",
+                "to": "/trivia-two",
+              },
+              "ref": null,
+              "rendered": "Week 2",
+              "type": [Function],
+            },
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <NavLink
+                activeClassName="active"
+                aria-current="page"
+                className="trivia-page-link"
+                name="3"
+                to="/trivia-three"
+>
+                Week 3
+</NavLink>,
+              "className": "trivia-button",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
+                "children": "Week 3",
+                "className": "trivia-page-link",
+                "name": "3",
+                "to": "/trivia-three",
+              },
+              "ref": null,
+              "rendered": "Week 3",
+              "type": [Function],
+            },
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <NavLink
+                activeClassName="active"
+                aria-current="page"
+                className="trivia-page-link"
+                name="4"
+                to="/trivia-four"
+>
+                Week 4
+</NavLink>,
+              "className": "trivia-button",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
+                "children": "Week 4",
+                "className": "trivia-page-link",
+                "name": "4",
+                "to": "/trivia-four",
+              },
+              "ref": null,
+              "rendered": "Week 4",
+              "type": [Function],
+            },
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <NavLink
+                activeClassName="active"
+                aria-current="page"
+                className="trivia-page-link"
+                name="5"
+                to="/trivia-five"
+>
+                Week 5
+</NavLink>,
+              "className": "trivia-button",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
+                "children": "Week 5",
+                "className": "trivia-page-link",
+                "name": "5",
+                "to": "/trivia-five",
+              },
+              "ref": null,
+              "rendered": "Week 5",
+              "type": [Function],
+            },
+            "type": "button",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <NavLink
+            activeClassName="active"
+            aria-current="page"
+            to="/"
+>
+            <img
+                        alt="Orbital"
+                        className="trivia-header-image"
+                        src="orbital-header.svg"
+            />
+</NavLink>,
+          <h2
+            className="trivia-header"
+>
+            Trivia Center
+</h2>,
+          <div
+            className="trivia-button-container"
+>
+            <button
+                        className="trivia-button"
+            >
+                        <NavLink
+                                    activeClassName="active"
+                                    aria-current="page"
+                                    className="trivia-page-link"
+                                    name="1"
+                                    to="/trivia-one"
+                        >
+                                    Week 1
+                        </NavLink>
+            </button>
+            <button
+                        className="trivia-button"
+            >
+                        <NavLink
+                                    activeClassName="active"
+                                    aria-current="page"
+                                    className="trivia-page-link"
+                                    name="2"
+                                    to="/trivia-two"
+                        >
+                                    Week 2
+                        </NavLink>
+            </button>
+            <button
+                        className="trivia-button"
+            >
+                        <NavLink
+                                    activeClassName="active"
+                                    aria-current="page"
+                                    className="trivia-page-link"
+                                    name="3"
+                                    to="/trivia-three"
+                        >
+                                    Week 3
+                        </NavLink>
+            </button>
+            <button
+                        className="trivia-button"
+            >
+                        <NavLink
+                                    activeClassName="active"
+                                    aria-current="page"
+                                    className="trivia-page-link"
+                                    name="4"
+                                    to="/trivia-four"
+                        >
+                                    Week 4
+                        </NavLink>
+            </button>
+            <button
+                        className="trivia-button"
+            >
+                        <NavLink
+                                    activeClassName="active"
+                                    aria-current="page"
+                                    className="trivia-page-link"
+                                    name="5"
+                                    to="/trivia-five"
+                        >
+                                    Week 5
+                        </NavLink>
+            </button>
+</div>,
+        ],
+        "className": "trivia-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "aria-current": "page",
+            "children": <img
+              alt="Orbital"
+              className="trivia-header-image"
+              src="orbital-header.svg"
+/>,
+            "to": "/",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "Orbital",
+              "className": "trivia-header-image",
+              "src": "orbital-header.svg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Trivia Center",
+            "className": "trivia-header",
+          },
+          "ref": null,
+          "rendered": "Trivia Center",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <button
+                className="trivia-button"
+>
+                <NavLink
+                                activeClassName="active"
+                                aria-current="page"
+                                className="trivia-page-link"
+                                name="1"
+                                to="/trivia-one"
+                >
+                                Week 1
+                </NavLink>
+</button>,
+              <button
+                className="trivia-button"
+>
+                <NavLink
+                                activeClassName="active"
+                                aria-current="page"
+                                className="trivia-page-link"
+                                name="2"
+                                to="/trivia-two"
+                >
+                                Week 2
+                </NavLink>
+</button>,
+              <button
+                className="trivia-button"
+>
+                <NavLink
+                                activeClassName="active"
+                                aria-current="page"
+                                className="trivia-page-link"
+                                name="3"
+                                to="/trivia-three"
+                >
+                                Week 3
+                </NavLink>
+</button>,
+              <button
+                className="trivia-button"
+>
+                <NavLink
+                                activeClassName="active"
+                                aria-current="page"
+                                className="trivia-page-link"
+                                name="4"
+                                to="/trivia-four"
+                >
+                                Week 4
+                </NavLink>
+</button>,
+              <button
+                className="trivia-button"
+>
+                <NavLink
+                                activeClassName="active"
+                                aria-current="page"
+                                className="trivia-page-link"
+                                name="5"
+                                to="/trivia-five"
+                >
+                                Week 5
+                </NavLink>
+</button>,
+            ],
+            "className": "trivia-button-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  className="trivia-page-link"
+                  name="1"
+                  to="/trivia-one"
+>
+                  Week 1
+</NavLink>,
+                "className": "trivia-button",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "activeClassName": "active",
+                  "aria-current": "page",
+                  "children": "Week 1",
+                  "className": "trivia-page-link",
+                  "name": "1",
+                  "to": "/trivia-one",
+                },
+                "ref": null,
+                "rendered": "Week 1",
+                "type": [Function],
+              },
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  className="trivia-page-link"
+                  name="2"
+                  to="/trivia-two"
+>
+                  Week 2
+</NavLink>,
+                "className": "trivia-button",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "activeClassName": "active",
+                  "aria-current": "page",
+                  "children": "Week 2",
+                  "className": "trivia-page-link",
+                  "name": "2",
+                  "to": "/trivia-two",
+                },
+                "ref": null,
+                "rendered": "Week 2",
+                "type": [Function],
+              },
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  className="trivia-page-link"
+                  name="3"
+                  to="/trivia-three"
+>
+                  Week 3
+</NavLink>,
+                "className": "trivia-button",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "activeClassName": "active",
+                  "aria-current": "page",
+                  "children": "Week 3",
+                  "className": "trivia-page-link",
+                  "name": "3",
+                  "to": "/trivia-three",
+                },
+                "ref": null,
+                "rendered": "Week 3",
+                "type": [Function],
+              },
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  className="trivia-page-link"
+                  name="4"
+                  to="/trivia-four"
+>
+                  Week 4
+</NavLink>,
+                "className": "trivia-button",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "activeClassName": "active",
+                  "aria-current": "page",
+                  "children": "Week 4",
+                  "className": "trivia-page-link",
+                  "name": "4",
+                  "to": "/trivia-four",
+                },
+                "ref": null,
+                "rendered": "Week 4",
+                "type": [Function],
+              },
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  className="trivia-page-link"
+                  name="5"
+                  to="/trivia-five"
+>
+                  Week 5
+</NavLink>,
+                "className": "trivia-button",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "activeClassName": "active",
+                  "aria-current": "page",
+                  "children": "Week 5",
+                  "className": "trivia-page-link",
+                  "name": "5",
+                  "to": "/trivia-five",
+                },
+                "ref": null,
+                "rendered": "Week 5",
+                "type": [Function],
+              },
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
