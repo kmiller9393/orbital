@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { populateTriviaFacts } from '../../thunks';
-import { populateReview } from '../../thunks';
+import { populateTriviaFacts } from '../../thunks/populateTriviaFacts';
+import { populateReview } from '../../thunks/populateReview';
 import orbital from '../../images/orbital-header.svg';
 import './Home.css';
 
@@ -22,7 +23,7 @@ class Home extends Component {
       <div>
         <header className="main-header-container">
           <img className="main-header-image" src={orbital} alt="Orbital" />
-          <h1 className="header-title">Welcome Back, Brandon</h1>
+          <h1 className="header-title">Welcome Back</h1>
         </header>
         <div className="homepage-buttons">
           <button className="home-button">
@@ -58,3 +59,9 @@ export default connect(
   null,
   mapDispatchToProps
 )(Home);
+
+const { func } = PropTypes;
+Home.propTypes = {
+  populateTrivia: func,
+  populateReview: func
+};
