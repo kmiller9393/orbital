@@ -1,7 +1,20 @@
-import ReviewContainer, { mapStateToProps } from './ReviewContainer';
+import React from 'react';
+import { shallow, mount } from 'enzyme';
+import { ReviewContainer, mapStateToProps } from './ReviewContainer';
 
 describe('ReviewContainer', () => {
-  describe('ReviewContainer component', () => {});
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<ReviewContainer />);
+  });
+
+  describe('ReviewContainer component', () => {
+    it('should match the snapshot', () => {
+      wrapper = mount(<ReviewContainer />);
+      expect(wrapper).toMatchSnapshot();
+    });
+  });
 
   describe('mapStateToProps', () => {
     it('should return an array of glossary objects', () => {

@@ -1,12 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from './App';
+import TriviaCard from './TriviaCard';
 
-describe('App', () => {
+describe('TriviaCard', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<App />);
+    wrapper = shallow(<TriviaCard />);
   });
 
   it('should match the snapshot', () => {

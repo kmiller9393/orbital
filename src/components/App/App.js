@@ -3,7 +3,7 @@ import Home from '../../containers/Home/Home';
 import Review from '../Review/Review';
 import ReviewContainer from '../../containers/ReviewContainer/ReviewContainer';
 import TriviaContainer from '../../containers/TriviaContainer/TriviaContainer';
-import Trivia from '../../containers/Trivia/Trivia';
+import Trivia from '../Trivia/Trivia';
 import Results from '../../containers/Results/Results';
 import { Route } from 'react-router-dom';
 import './App.css';

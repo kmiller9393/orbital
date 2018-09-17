@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import orbital from '../../images/orbital-header.svg';
 import './Results.css';
 
-class Results extends Component {
+export class Results extends Component {
   constructor() {
     super();
     this.state = {};

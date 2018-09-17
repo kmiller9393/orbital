@@ -1,5 +1,15 @@
-import { mapDispatchToProps } from './Trivia';
+import React from 'react';
+import { shallow } from 'enzyme';
+import Trivia from './Trivia';
 
 describe('Trivia', () => {
-  describe('Trivia component', () => {});
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<Trivia />);
+  });
+
+  it('should match the snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 });
