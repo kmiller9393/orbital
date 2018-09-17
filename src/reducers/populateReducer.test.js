@@ -11,7 +11,7 @@ describe('populateReducer', () => {
 
   it('should return an array of glossary items', () => {
     const expected = mockGlossaryItems;
-    const result = populateReducer([], actions.populatePage(mockGlossaryItems));
+    const result = populateReducer([], actions.addGlossary(mockGlossaryItems));
     expect(result).toEqual(expected);
   });
 });
