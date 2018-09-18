@@ -22,15 +22,15 @@ describe('apiCalls', () => {
     const result = await fetchSpaceFacts(url);
     expect(result).toEqual(mockGlossaryItems);
   });
-});
 
-it('should throw an error if status code is not ok', async () => {
-  const expected = new Error('Error Fetching Space Facts');
-  window.fetch = jest
-    .fn()
-    .mockImplementation(() =>
-      Promise.reject(new Error('Error Fetching Space Facts'))
-    );
+  it('should throw an error if status code is not ok', async () => {
+    const expected = new Error('Error Fetching Space Facts');
+    window.fetch = jest
+      .fn()
+      .mockImplementation(() =>
+        Promise.reject(new Error('Error Fetching Space Facts'))
+      );
 
-  await expect(fetchSpaceFacts()).rejects.toEqual(expected);
+    await expect(fetchSpaceFacts()).rejects.toEqual(expected);
+  });
 });

@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import orbital from '../../images/orbital-header.svg';
+import backArrow from '../../images/left-arrow.svg';
 import './Trivia.css';
 
 export default class Trivia extends Component {
   render() {
     return (
       <div className="trivia-container">
-        <NavLink to="/">
-          <img className="trivia-header-image" src={orbital} alt="Orbital" />
-        </NavLink>
+        <div className="trivia-header-container">
+          <NavLink to="/">
+            <img className="back-arrow" src={backArrow} alt="Navigate Back" />
+          </NavLink>
+          <NavLink to="/">
+            <img className="trivia-header-image" src={orbital} alt="Orbital" />
+          </NavLink>
+        </div>
         <h2 className="trivia-header">Trivia Center</h2>
         <div className="trivia-button-container">
           <button className="trivia-button">

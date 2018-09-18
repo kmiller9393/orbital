@@ -36,17 +36,34 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <NavLink
-          activeClassName="active"
-          aria-current="page"
-          to="/"
->
-          <img
-                    alt="Orbital"
-                    className="review-container-image"
-                    src="orbital-header.svg"
-          />
-</NavLink>,
+        <div>
+          <div
+                    className="review-header-container"
+          >
+                    <NavLink
+                              activeClassName="active"
+                              aria-current="page"
+                              to="/review"
+                    >
+                              <img
+                                        alt="Navigate Back"
+                                        className="back-arrow"
+                                        src="left-arrow.svg"
+                              />
+                    </NavLink>
+                    <NavLink
+                              activeClassName="active"
+                              aria-current="page"
+                              to="/"
+                    >
+                              <img
+                                        alt="Orbital"
+                                        className="review-container-image"
+                                        src="orbital-header.svg"
+                              />
+                    </NavLink>
+          </div>
+</div>,
         <h2
           className="week-title"
 >
@@ -82,16 +99,34 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "host",
         "props": Object {
-          "activeClassName": "active",
-          "aria-current": "page",
-          "children": <img
-            alt="Orbital"
-            className="review-container-image"
-            src="orbital-header.svg"
-/>,
-          "to": "/",
+          "children": <div
+            className="review-header-container"
+>
+            <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        to="/review"
+            >
+                        <img
+                                    alt="Navigate Back"
+                                    className="back-arrow"
+                                    src="left-arrow.svg"
+                        />
+            </NavLink>
+            <NavLink
+                        activeClassName="active"
+                        aria-current="page"
+                        to="/"
+            >
+                        <img
+                                    alt="Orbital"
+                                    className="review-container-image"
+                                    src="orbital-header.svg"
+                        />
+            </NavLink>
+</div>,
         },
         "ref": null,
         "rendered": Object {
@@ -99,15 +134,98 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "alt": "Orbital",
-            "className": "review-container-image",
-            "src": "orbital-header.svg",
+            "children": Array [
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                to="/review"
+>
+                <img
+                                alt="Navigate Back"
+                                className="back-arrow"
+                                src="left-arrow.svg"
+                />
+</NavLink>,
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                to="/"
+>
+                <img
+                                alt="Orbital"
+                                className="review-container-image"
+                                src="orbital-header.svg"
+                />
+</NavLink>,
+            ],
+            "className": "review-header-container",
           },
           "ref": null,
-          "rendered": null,
-          "type": "img",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
+                "children": <img
+                  alt="Navigate Back"
+                  className="back-arrow"
+                  src="left-arrow.svg"
+/>,
+                "to": "/review",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "Navigate Back",
+                  "className": "back-arrow",
+                  "src": "left-arrow.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
+                "children": <img
+                  alt="Orbital"
+                  className="review-container-image"
+                  src="orbital-header.svg"
+/>,
+                "to": "/",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "Orbital",
+                  "className": "review-container-image",
+                  "src": "orbital-header.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "type": [Function],
+            },
+          ],
+          "type": "div",
         },
-        "type": [Function],
+        "type": "div",
       },
       Object {
         "instance": null,
@@ -200,17 +318,34 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <NavLink
-            activeClassName="active"
-            aria-current="page"
-            to="/"
->
-            <img
-                        alt="Orbital"
-                        className="review-container-image"
-                        src="orbital-header.svg"
-            />
-</NavLink>,
+          <div>
+            <div
+                        className="review-header-container"
+            >
+                        <NavLink
+                                    activeClassName="active"
+                                    aria-current="page"
+                                    to="/review"
+                        >
+                                    <img
+                                                alt="Navigate Back"
+                                                className="back-arrow"
+                                                src="left-arrow.svg"
+                                    />
+                        </NavLink>
+                        <NavLink
+                                    activeClassName="active"
+                                    aria-current="page"
+                                    to="/"
+                        >
+                                    <img
+                                                alt="Orbital"
+                                                className="review-container-image"
+                                                src="orbital-header.svg"
+                                    />
+                        </NavLink>
+            </div>
+</div>,
           <h2
             className="week-title"
 >
@@ -246,16 +381,34 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "host",
           "props": Object {
-            "activeClassName": "active",
-            "aria-current": "page",
-            "children": <img
-              alt="Orbital"
-              className="review-container-image"
-              src="orbital-header.svg"
-/>,
-            "to": "/",
+            "children": <div
+              className="review-header-container"
+>
+              <NavLink
+                            activeClassName="active"
+                            aria-current="page"
+                            to="/review"
+              >
+                            <img
+                                          alt="Navigate Back"
+                                          className="back-arrow"
+                                          src="left-arrow.svg"
+                            />
+              </NavLink>
+              <NavLink
+                            activeClassName="active"
+                            aria-current="page"
+                            to="/"
+              >
+                            <img
+                                          alt="Orbital"
+                                          className="review-container-image"
+                                          src="orbital-header.svg"
+                            />
+              </NavLink>
+</div>,
           },
           "ref": null,
           "rendered": Object {
@@ -263,15 +416,98 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "alt": "Orbital",
-              "className": "review-container-image",
-              "src": "orbital-header.svg",
+              "children": Array [
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  to="/review"
+>
+                  <img
+                                    alt="Navigate Back"
+                                    className="back-arrow"
+                                    src="left-arrow.svg"
+                  />
+</NavLink>,
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  to="/"
+>
+                  <img
+                                    alt="Orbital"
+                                    className="review-container-image"
+                                    src="orbital-header.svg"
+                  />
+</NavLink>,
+              ],
+              "className": "review-header-container",
             },
             "ref": null,
-            "rendered": null,
-            "type": "img",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "activeClassName": "active",
+                  "aria-current": "page",
+                  "children": <img
+                    alt="Navigate Back"
+                    className="back-arrow"
+                    src="left-arrow.svg"
+/>,
+                  "to": "/review",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "Navigate Back",
+                    "className": "back-arrow",
+                    "src": "left-arrow.svg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "activeClassName": "active",
+                  "aria-current": "page",
+                  "children": <img
+                    alt="Orbital"
+                    className="review-container-image"
+                    src="orbital-header.svg"
+/>,
+                  "to": "/",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "Orbital",
+                    "className": "review-container-image",
+                    "src": "orbital-header.svg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                "type": [Function],
+              },
+            ],
+            "type": "div",
           },
-          "type": [Function],
+          "type": "div",
         },
         Object {
           "instance": null,

@@ -12,6 +12,7 @@ import { connect } from 'react-redux';
 import { addScore } from '../../actions';
 import PropTypes from 'prop-types';
 import orbital from '../../images/orbital-header.svg';
+import backArrow from '../../images/left-arrow.svg';
 import './TriviaContainer.css';
 
 export class TriviaContainer extends Component {
@@ -102,9 +103,18 @@ export class TriviaContainer extends Component {
 
     return (
       <div>
-        <NavLink to="/">
-          <img className="trivia-container-image" src={orbital} alt="Orbital" />
-        </NavLink>
+        <div className="trivia-container-header">
+          <NavLink to="trivia-center">
+            <img className="back-arrow" src={backArrow} alt="Navigate Back" />
+          </NavLink>
+          <NavLink to="/">
+            <img
+              className="trivia-container-image"
+              src={orbital}
+              alt="Orbital"
+            />
+          </NavLink>
+        </div>
         <h2 className="trivia-title">Weekly Trivia</h2>
 
         <div className="answers-container">

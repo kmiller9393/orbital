@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import orbital from '../../images/orbital-header.svg';
+import backArrow from '../../images/left-arrow.svg';
 import './Review.css';
 
 export default class Review extends Component {
   render() {
     return (
       <div className="review-container">
-        <NavLink to="/">
-          <img className="review-header-image" src={orbital} alt="Orbital" />
-        </NavLink>
+        <div className="review-header-container">
+          <NavLink to="/">
+            <img className="back-arrow" src={backArrow} alt="Navigate Back" />
+          </NavLink>
+          <NavLink to="/">
+            <img className="review-header-image" src={orbital} alt="Orbital" />
+          </NavLink>
+        </div>
         <h2 className="review-header">Weekly Reviews</h2>
         <div className="review-button-container">
           <button className="review-button">

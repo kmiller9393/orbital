@@ -7,11 +7,18 @@
   color: #f7f7f7;
   margin-top: 2.5rem; }
 
+.trivia-header-container {
+  padding-right: 6.5rem; }
+
 .trivia-container {
   font-family: 'Chalkboard SE', 'Times New Roman', serif;
   align-items: center;
   display: flex;
   flex-direction: column; }
+
+.back-arrow {
+  height: 40px;
+  padding: 0rem 4rem 0.5rem 0rem; }
 
 .trivia-button {
   background-color: #009c92;
