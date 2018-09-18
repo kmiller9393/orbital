@@ -3,7 +3,10 @@
 exports[`Results Results component should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Results />,
+  Symbol(enzyme.__unrendered__): <Results
+    resetScore={[Function]}
+    score={undefined}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -21,6 +24,7 @@ ShallowWrapper {
         <NavLink
           activeClassName="active"
           aria-current="page"
+          className="reset-link"
           onClick={[Function]}
           to="/"
 >
@@ -67,6 +71,7 @@ ShallowWrapper {
             className="results-image"
             src="orbital-header.svg"
 />,
+          "className": "reset-link",
           "onClick": [Function],
           "to": "/",
         },
@@ -184,6 +189,7 @@ ShallowWrapper {
           <NavLink
             activeClassName="active"
             aria-current="page"
+            className="reset-link"
             onClick={[Function]}
             to="/"
 >
@@ -230,6 +236,7 @@ ShallowWrapper {
               className="results-image"
               src="orbital-header.svg"
 />,
+            "className": "reset-link",
             "onClick": [Function],
             "to": "/",
           },

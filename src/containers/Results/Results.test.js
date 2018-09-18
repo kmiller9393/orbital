@@ -5,14 +5,36 @@ import { resetScore } from '../../actions';
 
 describe('Results', () => {
   let wrapper;
+  let mockResetScore;
+  let mockScore;
 
   beforeEach(() => {
-    wrapper = shallow(<Results />);
+    mockResetScore = jest.fn();
+    wrapper = shallow(
+      <Results resetScore={mockResetScore} score={mockScore} />
+    );
   });
 
   describe('Results component', () => {
     it('should match the snapshot', () => {
       expect(wrapper).toMatchSnapshot();
+    });
+
+    it('should call the resetScore action creator when the link is clicked', () => {
+      wrapper.find('.reset-link').simulate('click');
+      expect(mockResetScore).toHaveBeenCalled();
+    });
+
+    it('should have a class of high-score if the score is greater than 6', () => {
+      wrapper = shallow(<Results score={7} />);
+      expect(wrapper.find('span').hasClass('high-score')).toEqual(true);
+      expect(wrapper.find('span').hasClass('low-score')).toEqual(false);
+    });
+
+    it('should have a class of low-score if the score is less than 6', () => {
+      wrapper = shallow(<Results score={5} />);
+      expect(wrapper.find('span').hasClass('low-score')).toEqual(true);
+      expect(wrapper.find('span').hasClass('high-score')).toEqual(false);
     });
   });
 
