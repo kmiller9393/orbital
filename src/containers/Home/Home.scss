@@ -6,39 +6,34 @@
   justify-content: space-between;
   margin-top: 1.5rem;
 }
-
 .header-title {
   color: #f7f7f7;
   font-family: 'Chalkboard SE', 'Times New Roman', serif;
   font-size: 1.6rem;
   font-weight: lighter;
 }
-
 .main-header-image {
   height: 55px;
   width: 125px;
 }
-
 .review-link-1,
 .trivia-link-1 {
   color: #f7f7f7;
   font-size: 1.5rem;
   text-decoration: none;
 }
-
 .homepage-buttons {
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
-
 .home-button {
   background-color: #009c92;
   border-color: #009c92;
   border-radius: 5px;
   font-family: 'Chalkboard SE', 'Times New Roman', serif;
   height: 45px;
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
   width: 200px;
 }
