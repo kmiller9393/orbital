@@ -26,8 +26,13 @@ export class TriviaContainer extends Component {
   }
 
   componentDidMount() {
+    const { pathname } = this.props.location;
+    this.setPathname(pathname);
+  }
+
+  setPathname = () => {
     const { triviaAnswers } = this.props;
-    const { pathname } = this.props.history.location;
+    const { pathname } = this.props.location;
     const { ready } = this.state;
     let triviaItems;
 
@@ -55,7 +60,7 @@ export class TriviaContainer extends Component {
       triviaItems = addTriviaFive(triviaAnswers);
       this.setState({ triviaItems, ready: !ready });
     }
-  }
+  };
 
   checkAnswer = event => {
     const { history, addScore, score } = this.props;
@@ -103,24 +108,39 @@ export class TriviaContainer extends Component {
 
     return (
       <div>
-        <div className="trivia-container-header">
-          <NavLink to="trivia-center">
-            <img className="back-arrow" src={backArrow} alt="Navigate Back" />
-          </NavLink>
-          <NavLink to="/">
+        <div className={!ready ? 'trivia-container-header' : ''}>
+          {!ready && (
+            <NavLink to="trivia-center">
+              <img className="back-arrow" src={backArrow} alt="Navigate Back" />
+            </NavLink>
+          )}
+          {!ready && (
+            <NavLink to="/">
+              <img
+                className={
+                  !ready ? 'trivia--image-after' : 'trivia-container-image'
+                }
+                src={orbital}
+                alt="Orbital"
+              />
+            </NavLink>
+          )}
+          {ready && (
             <img
-              className="trivia-container-image"
+              className={
+                !ready ? 'trivia--image-after' : 'trivia-container-image'
+              }
               src={orbital}
               alt="Orbital"
             />
-          </NavLink>
+          )}
         </div>
         <h2 className="trivia-title">Weekly Trivia</h2>
 
         <div className="answers-container">
           {ready && <h3>What is {triviaItems[page].question}?</h3>}
           <div className="choice-card" onClick={e => this.checkAnswer(e)}>
-            {answers[Math.floor(Math.random() * 46)]}
+            {answers[page + 2]}
           </div>
           {ready && (
             <div onClick={e => this.checkAnswer(e)} className="trivia-card">
@@ -128,11 +148,9 @@ export class TriviaContainer extends Component {
             </div>
           )}
           <div onClick={e => this.checkAnswer(e)}>
-            {answers[Math.floor(Math.random() * 46)]}
+            {answers[(page + 1) * 4]}
           </div>
-          <div onClick={e => this.checkAnswer(e)}>
-            {answers[Math.floor(Math.random() * 46)]}
-          </div>
+          <div onClick={e => this.checkAnswer(e)}>{answers[page + 1]}</div>
         </div>
       </div>
     );
