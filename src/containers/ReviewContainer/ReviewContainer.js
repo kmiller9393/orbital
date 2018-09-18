@@ -11,6 +11,7 @@ import {
 } from '../../utils/helper';
 import PropTypes from 'prop-types';
 import orbital from '../../images/orbital-header.svg';
+import backArrow from '../../images/left-arrow.svg';
 import './ReviewContainer.css';
 
 export class ReviewContainer extends Component {
@@ -95,9 +96,20 @@ export class ReviewContainer extends Component {
 
     return (
       <div>
-        <NavLink to="/">
-          <img className="review-container-image" src={orbital} alt="Orbital" />
-        </NavLink>
+        <div>
+          <div className="review-header-container">
+            <NavLink to="/review">
+              <img className="back-arrow" src={backArrow} alt="Navigate Back" />
+            </NavLink>
+            <NavLink to="/">
+              <img
+                className="review-container-image"
+                src={orbital}
+                alt="Orbital"
+              />
+            </NavLink>
+          </div>
+        </div>
         <h2 className="week-title">Weekly Review</h2>
         {ready && <ReviewCard {...reviewItems[page]} key={page} />}
         <div className="button-container">
