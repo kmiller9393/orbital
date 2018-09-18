@@ -3,7 +3,10 @@
 exports[`Home Home component should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Home />,
+  Symbol(enzyme.__unrendered__): <Home
+    populateReview={[Function]}
+    populateTrivia={[Function]}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -41,7 +44,8 @@ ShallowWrapper {
                     <NavLink
                               activeClassName="active"
                               aria-current="page"
-                              className="review-link"
+                              className="review-link-1"
+                              name="review-link"
                               onClick={[Function]}
                               to="/review"
                     >
@@ -54,7 +58,8 @@ ShallowWrapper {
                     <NavLink
                               activeClassName="active"
                               aria-current="page"
-                              className="review-link"
+                              className="trivia-link-1"
+                              name="trivia-link"
                               onClick={[Function]}
                               to="/trivia-center"
                     >
@@ -127,7 +132,8 @@ ShallowWrapper {
               <NavLink
                             activeClassName="active"
                             aria-current="page"
-                            className="review-link"
+                            className="review-link-1"
+                            name="review-link"
                             onClick={[Function]}
                             to="/review"
               >
@@ -140,7 +146,8 @@ ShallowWrapper {
               <NavLink
                             activeClassName="active"
                             aria-current="page"
-                            className="review-link"
+                            className="trivia-link-1"
+                            name="trivia-link"
                             onClick={[Function]}
                             to="/trivia-center"
               >
@@ -160,7 +167,8 @@ ShallowWrapper {
               "children": <NavLink
                 activeClassName="active"
                 aria-current="page"
-                className="review-link"
+                className="review-link-1"
+                name="review-link"
                 onClick={[Function]}
                 to="/review"
 >
@@ -177,7 +185,8 @@ ShallowWrapper {
                 "activeClassName": "active",
                 "aria-current": "page",
                 "children": "Review",
-                "className": "review-link",
+                "className": "review-link-1",
+                "name": "review-link",
                 "onClick": [Function],
                 "to": "/review",
               },
@@ -195,7 +204,8 @@ ShallowWrapper {
               "children": <NavLink
                 activeClassName="active"
                 aria-current="page"
-                className="review-link"
+                className="trivia-link-1"
+                name="trivia-link"
                 onClick={[Function]}
                 to="/trivia-center"
 >
@@ -212,7 +222,8 @@ ShallowWrapper {
                 "activeClassName": "active",
                 "aria-current": "page",
                 "children": "Trivia Center",
-                "className": "review-link",
+                "className": "trivia-link-1",
+                "name": "trivia-link",
                 "onClick": [Function],
                 "to": "/trivia-center",
               },
@@ -258,7 +269,8 @@ ShallowWrapper {
                         <NavLink
                                     activeClassName="active"
                                     aria-current="page"
-                                    className="review-link"
+                                    className="review-link-1"
+                                    name="review-link"
                                     onClick={[Function]}
                                     to="/review"
                         >
@@ -271,7 +283,8 @@ ShallowWrapper {
                         <NavLink
                                     activeClassName="active"
                                     aria-current="page"
-                                    className="review-link"
+                                    className="trivia-link-1"
+                                    name="trivia-link"
                                     onClick={[Function]}
                                     to="/trivia-center"
                         >
@@ -344,7 +357,8 @@ ShallowWrapper {
                 <NavLink
                                 activeClassName="active"
                                 aria-current="page"
-                                className="review-link"
+                                className="review-link-1"
+                                name="review-link"
                                 onClick={[Function]}
                                 to="/review"
                 >
@@ -357,7 +371,8 @@ ShallowWrapper {
                 <NavLink
                                 activeClassName="active"
                                 aria-current="page"
-                                className="review-link"
+                                className="trivia-link-1"
+                                name="trivia-link"
                                 onClick={[Function]}
                                 to="/trivia-center"
                 >
@@ -377,7 +392,8 @@ ShallowWrapper {
                 "children": <NavLink
                   activeClassName="active"
                   aria-current="page"
-                  className="review-link"
+                  className="review-link-1"
+                  name="review-link"
                   onClick={[Function]}
                   to="/review"
 >
@@ -394,7 +410,8 @@ ShallowWrapper {
                   "activeClassName": "active",
                   "aria-current": "page",
                   "children": "Review",
-                  "className": "review-link",
+                  "className": "review-link-1",
+                  "name": "review-link",
                   "onClick": [Function],
                   "to": "/review",
                 },
@@ -412,7 +429,8 @@ ShallowWrapper {
                 "children": <NavLink
                   activeClassName="active"
                   aria-current="page"
-                  className="review-link"
+                  className="trivia-link-1"
+                  name="trivia-link"
                   onClick={[Function]}
                   to="/trivia-center"
 >
@@ -429,7 +447,8 @@ ShallowWrapper {
                   "activeClassName": "active",
                   "aria-current": "page",
                   "children": "Trivia Center",
-                  "className": "review-link",
+                  "className": "trivia-link-1",
+                  "name": "trivia-link",
                   "onClick": [Function],
                   "to": "/trivia-center",
                 },
