@@ -28,18 +28,20 @@ export class Home extends Component {
         <div className="homepage-buttons">
           <button className="home-button">
             <NavLink
-              className="review-link"
+              className="review-link-1"
               to="/review"
               onClick={this.setReviewItems}
+              name="review-link"
             >
               Review
             </NavLink>
           </button>
           <button className="home-button">
             <NavLink
-              className="review-link"
+              className="trivia-link-1"
               to="/trivia-center"
               onClick={this.setTriviaItems}
+              name="trivia-link"
             >
               Trivia Center
             </NavLink>
