@@ -56,14 +56,14 @@ export class TriviaContainer extends Component {
     }
   }
 
-  checkAnswer = e => {
+  checkAnswer = event => {
     const { history, addScore, score } = this.props;
     const { page, triviaItems } = this.state;
 
     const answers = triviaItems.map(subject => subject.answer);
     let newPage = page;
 
-    if (e.target.innerText === answers[newPage]) {
+    if (event.target.innerText === answers[newPage]) {
       addScore(score);
     }
 
@@ -109,7 +109,7 @@ export class TriviaContainer extends Component {
 
         <div className="answers-container">
           {ready && <h3>What is {triviaItems[page].question}?</h3>}
-          <div onClick={e => this.checkAnswer(e)}>
+          <div className="choice-card" onClick={e => this.checkAnswer(e)}>
             {answers[Math.floor(Math.random() * 46)]}
           </div>
           {ready && (
