@@ -25,43 +25,43 @@ export class ReviewContainer extends Component {
 
   componentDidMount() {
     const { glossary } = this.props;
-    // const { pathname } = this.props.history.location;
+    const { pathname } = this.props.history.location;
     const { ready } = this.state;
     let reviewItems;
 
-    if (this.props.history.location.pathname.includes('/review-one')) {
+    if (pathname.includes('/review-one')) {
       reviewItems = addReviewOne(glossary);
       this.setState({ reviewItems, ready: !ready });
     }
 
-    if (this.props.history.location.pathname.includes('/review-two')) {
+    if (pathname.includes('/review-two')) {
       reviewItems = addReviewTwo(glossary);
       this.setState({ reviewItems, ready: !ready });
     }
 
-    if (this.props.history.location.pathname.includes('/review-three')) {
+    if (pathname.includes('/review-three')) {
       reviewItems = addReviewThree(glossary);
       this.setState({ reviewItems, ready: !ready });
     }
 
-    if (this.props.history.location.pathname.includes('/review-four')) {
+    if (pathname.includes('/review-four')) {
       reviewItems = addReviewFour(glossary);
       this.setState({ reviewItems, ready: !ready });
     }
 
-    if (this.props.history.location.pathname.includes('/review-five')) {
+    if (pathname.includes('/review-five')) {
       reviewItems = addReviewFive(glossary);
       this.setState({ reviewItems, ready: !ready });
     }
   }
 
-  navigateCard = e => {
+  navigateCard = event => {
     const { page, reviewItems } = this.state;
     const { history } = this.props;
-    // const { pathname } = this.props.history.location;
+    const { pathname } = this.props.history.location;
     let newPage = page;
 
-    e.target.name === 'next' ? newPage++ : newPage--;
+    event.target.name === 'next' ? newPage++ : newPage--;
 
     if (newPage < 0 || newPage > reviewItems.length - 1) {
       return;
@@ -69,23 +69,23 @@ export class ReviewContainer extends Component {
 
     this.setState({ page: newPage });
 
-    if (this.props.history.location.pathname.includes('/review-one')) {
+    if (pathname.includes('/review-one')) {
       history.replace(`/review-one/${reviewItems[newPage].name}`);
     }
 
-    if (this.props.history.location.pathname.includes('/review-two')) {
+    if (pathname.includes('/review-two')) {
       history.replace(`/review-two/${reviewItems[newPage].name}`);
     }
 
-    if (this.props.history.location.pathname.includes('/review-three')) {
+    if (pathname.includes('/review-three')) {
       history.replace(`/review-three/${reviewItems[newPage].name}`);
     }
 
-    if (this.props.history.location.pathname.includes('/review-four')) {
+    if (pathname.includes('/review-four')) {
       history.replace(`/review-four/${reviewItems[newPage].name}`);
     }
 
-    if (this.props.history.location.pathname.includes('/review-five')) {
+    if (pathname.includes('/review-five')) {
       history.replace(`/review-five/${reviewItems[newPage].name}`);
     }
   };

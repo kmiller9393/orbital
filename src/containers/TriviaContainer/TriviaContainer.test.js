@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import {
   TriviaContainer,
   mapStateToProps,
@@ -9,15 +9,56 @@ import { addScore } from '../../actions';
 
 describe('TriviaContainer', () => {
   let wrapper;
+  let mockTriviaAnswers;
+  let mockHistory;
+  let mockEvent;
 
   beforeEach(() => {
-    wrapper = shallow(<TriviaContainer />);
+    mockTriviaAnswers = [
+      {
+        question: 'a small solar system object composed mostly of rock"',
+        answer: 'Asteroid',
+        id: 0
+      }
+    ];
+
+    mockEvent = {
+      target: {
+        innerText: 'Asteroid',
+        value: 7
+      }
+    };
+
+    mockHistory = {
+      location: {
+        pathname: '/review-one'
+      },
+      replace: () => jest.fn()
+    };
   });
 
   describe('TriviaContainer component', () => {
     it('should match the snapshot', () => {
-      wrapper = mount(<TriviaContainer />);
+      wrapper = shallow(
+        <TriviaContainer
+          triviaAnswers={mockTriviaAnswers}
+          history={mockHistory}
+        />
+      );
       expect(wrapper).toMatchSnapshot();
+    });
+
+    it('should call checkAnswer when a possible answer is clicked', () => {
+      wrapper = shallow(
+        <TriviaContainer
+          triviaAnswers={mockTriviaAnswers}
+          history={mockHistory}
+        />
+      );
+      const spy = jest.spyOn(wrapper.instance(), 'checkAnswer');
+      wrapper.instance().forceUpdate();
+      wrapper.find('.choice-card').simulate('click', mockEvent);
+      expect(spy).toHaveBeenCalledWith(mockEvent);
     });
   });
 

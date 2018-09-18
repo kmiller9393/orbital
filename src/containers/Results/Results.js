@@ -16,7 +16,7 @@ export class Results extends Component {
 
     return (
       <div>
-        <NavLink to="/" onClick={() => resetScore()}>
+        <NavLink className="reset-link" to="/" onClick={() => resetScore()}>
           <img className="results-image" src={orbital} alt="Orbital" />
         </NavLink>
         <div className="score-container">

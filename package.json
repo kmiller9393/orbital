@@ -39,7 +39,8 @@
       "!src/reducers/index.js",
       "!src/setupTests.js",
       "!src/registerServiceWorker.js",
-      "!src/apiKey.js"
+      "!src/apiKey.js",
+      "!src/utils/mockData.js"
     ]
   }
 }
