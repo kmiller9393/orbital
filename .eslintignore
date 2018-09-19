@@ -1,2 +1,4 @@
 /src/registerServiceWorker.js
 /coverage
+build/service-worker.js
+build/static/js/main.7eecf060.js
