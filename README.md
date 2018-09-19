@@ -1,6 +1,6 @@
 # Orbital
 
-#### By ![Kurt Miller](https://github.com/kmiller9393)
+#### By <a href="https://github.com/kmiller9393">Kurt Miller</a>
 
 ### Project
 
