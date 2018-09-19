@@ -76,7 +76,7 @@ export const fetchSpaceFacts = jest.fn().mockImplementation(() => [
   {
     name: 'Globular Cluster',
     definition:
-      "A collection of hundreds of thousands of old stars held together by gravity. Globular clusters are usually spherically shaped and are often found in the halos of galaxies. Each star belonging to a cluster revolves around the cluster's common center of mass."
+      'A collection of hundreds of thousands of old stars held together by gravity. Globular clusters are usually spherically shaped and are often found in the halos of galaxies. Each star belonging to a cluster revolves around the cluster\'s common center of mass.'
   },
   {
     name: 'Gravitational Lens',
@@ -146,7 +146,7 @@ export const fetchSpaceFacts = jest.fn().mockImplementation(() => [
   {
     name: 'Pluto',
     definition:
-      "A dwarf planet whose small size and composition of ice and rock resembles the comets in the Kuiper Belt, a region beyond Neptune's orbit where Pluto resides. Pluto was considered the ninth planet until August 2006, when the International Astronomical Union reclassified it as a dwarf planet. Pluto's orbit is more elliptical than those of the eight solar system planets."
+      'A dwarf planet whose small size and composition of ice and rock resembles the comets in the Kuiper Belt, a region beyond Neptune\'s orbit where Pluto resides. Pluto was considered the ninth planet until August 2006, when the International Astronomical Union reclassified it as a dwarf planet. Pluto\'s orbit is more elliptical than those of the eight solar system planets.'
   },
   {
     name: 'Pulsar',
@@ -166,12 +166,12 @@ export const fetchSpaceFacts = jest.fn().mockImplementation(() => [
   {
     name: 'Saturn',
     definition:
-      "The sixth planet in the solar system, noted for its obvious ring structure. Saturn is almost ten times the Earth's distance from the Sun. The planet completes a circuit around the Sun in about 30 Earth years. Saturn is the second largest and the least dense planet in our solar system. The planet has more than 21 moons, including Titan, the second largest known moon in our solar system."
+      'The sixth planet in the solar system, noted for its obvious ring structure. Saturn is almost ten times the Earth\'s distance from the Sun. The planet completes a circuit around the Sun in about 30 Earth years. Saturn is the second largest and the least dense planet in our solar system. The planet has more than 21 moons, including Titan, the second largest known moon in our solar system.'
   },
   {
     name: 'Solar System',
     definition:
-      "The Sun and its surrounding matter, including asteroids, comets, planets, and moons, held together by the Sun's gravitational influence."
+      'The Sun and its surrounding matter, including asteroids, comets, planets, and moons, held together by the Sun\'s gravitational influence.'
   },
   {
     name: 'Spectroscopy',
@@ -221,7 +221,7 @@ export const fetchSpaceFacts = jest.fn().mockImplementation(() => [
   {
     name: 'Uranus',
     definition:
-      "The third largest planet in the solar system and the seventh from the Sun. Uranus is 19 times the Earth's distance from the Sun and completes a circuit around the Sun in about 84 Earth years. This gaseous, giant, outer planet has a visible ring system and over 20 moons, the largest of which is Titania. Uranus is tipped on its side, with a rotation axis in nearly the same plane as its orbit."
+      'The third largest planet in the solar system and the seventh from the Sun. Uranus is 19 times the Earth\'s distance from the Sun and completes a circuit around the Sun in about 84 Earth years. This gaseous, giant, outer planet has a visible ring system and over 20 moons, the largest of which is Titania. Uranus is tipped on its side, with a rotation axis in nearly the same plane as its orbit.'
   },
   {
     name: 'Variable Star',
