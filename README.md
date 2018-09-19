@@ -20,12 +20,12 @@ Orbital is a mobile-first application that utilizes data from Hubblesite's API t
 
 #### Landing Page
 
-![](src/images/landing-page.png 375x667)
+<img src="src/images/landing-page.png" width="375" />
 
 #### Review Page
 
-![](src/images/review-page.png 375x667)
+<img src="src/images/review-page.png" width="375" />
 
 #### Trivia Page
 
-![](src/images/trivia-page.png 375x667)
+<img src="src/images/trivia-page.png" width="375" />
