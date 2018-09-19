@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { Home, mapDispatchToProps } from './Home';
 import { populateTriviaFacts } from '../../thunks/populateTriviaFacts';
 import { populateReview } from '../../thunks/populateReview';
