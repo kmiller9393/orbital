@@ -147,10 +147,12 @@ export class TriviaContainer extends Component {
               {triviaItems[page].answer}
             </div>
           )}
-          <div onClick={e => this.checkAnswer(e)}>
+          <div className="option" onClick={e => this.checkAnswer(e)}>
             {answers[(page + 1) * 4]}
           </div>
-          <div onClick={e => this.checkAnswer(e)}>{answers[page + 1]}</div>
+          <div className="choice" onClick={e => this.checkAnswer(e)}>
+            {answers[page + 1]}
+          </div>
         </div>
       </div>
     );

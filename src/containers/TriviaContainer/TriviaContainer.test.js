@@ -5,6 +5,7 @@ import {
   mapStateToProps,
   mapDispatchToProps
 } from './TriviaContainer';
+import { mockTriviaItems } from '../../utils/mockData';
 import { addScore } from '../../actions';
 
 describe('TriviaContainer', () => {
@@ -13,6 +14,7 @@ describe('TriviaContainer', () => {
   let mockHistory;
   let mockLocation;
   let mockEvent;
+  let mockAddScore;
 
   beforeEach(() => {
     mockTriviaAnswers = [
@@ -40,31 +42,60 @@ describe('TriviaContainer', () => {
     mockLocation = {
       pathname: '/review-one'
     };
+
+    mockAddScore = jest.fn();
+
+    wrapper = shallow(
+      <TriviaContainer
+        triviaAnswers={mockTriviaAnswers}
+        history={mockHistory}
+        location={mockLocation}
+        addScore={mockAddScore}
+      />
+    );
   });
 
   describe('TriviaContainer component', () => {
     it('should match the snapshot', () => {
-      wrapper = shallow(
-        <TriviaContainer
-          triviaAnswers={mockTriviaAnswers}
-          history={mockHistory}
-          location={mockLocation}
-        />
-      );
       expect(wrapper).toMatchSnapshot();
     });
 
     it('should call checkAnswer when a possible answer is clicked', () => {
-      wrapper = shallow(
-        <TriviaContainer
-          triviaAnswers={mockTriviaAnswers}
-          history={mockHistory}
-          location={mockLocation}
-        />
-      );
       const spy = jest.spyOn(wrapper.instance(), 'checkAnswer');
+
       wrapper.instance().forceUpdate();
       wrapper.find('.choice-card').simulate('click', mockEvent);
+
+      expect(spy).toHaveBeenCalledWith(mockEvent);
+    });
+
+    it('should call checkAnswer when the next possible answer is clicked', () => {
+      const spy = jest.spyOn(wrapper.instance(), 'checkAnswer');
+
+      wrapper.instance().forceUpdate();
+      wrapper.find('.option').simulate('click', mockEvent);
+
+      expect(spy).toHaveBeenCalledWith(mockEvent);
+    });
+
+    it('should call checkAnswer when the next possible answer is clicked', () => {
+      const spy = jest.spyOn(wrapper.instance(), 'checkAnswer');
+
+      wrapper.instance().forceUpdate();
+      wrapper.find('.choice').simulate('click', mockEvent);
+
+      expect(spy).toHaveBeenCalledWith(mockEvent);
+    });
+
+    it('should call checkAnswer when the next possible answer it clicked', () => {
+      const triviaItems = [...mockTriviaItems];
+      const spy = jest.spyOn(wrapper.instance(), 'checkAnswer');
+
+      wrapper.setState({ triviaItems, ready: true });
+
+      wrapper.instance().forceUpdate();
+      wrapper.find('.trivia-card').simulate('click', mockEvent);
+
       expect(spy).toHaveBeenCalledWith(mockEvent);
     });
   });
