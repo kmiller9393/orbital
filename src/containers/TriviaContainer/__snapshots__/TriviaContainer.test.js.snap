@@ -12,6 +12,11 @@ ShallowWrapper {
             "replace": [Function],
           }
     }
+    location={
+        Object {
+            "pathname": "/review-one",
+          }
+    }
     triviaAnswers={
         Array [
             Object {
@@ -57,7 +62,7 @@ ShallowWrapper {
           >
                     <img
                               alt="Orbital"
-                              className="trivia-container-image"
+                              className="trivia--image-after"
                               src="orbital-header.svg"
                     />
           </NavLink>
@@ -109,10 +114,11 @@ ShallowWrapper {
 >
               <img
                             alt="Orbital"
-                            className="trivia-container-image"
+                            className="trivia--image-after"
                             src="orbital-header.svg"
               />
 </NavLink>,
+            false,
           ],
           "className": "trivia-container-header",
         },
@@ -157,7 +163,7 @@ ShallowWrapper {
               "aria-current": "page",
               "children": <img
                 alt="Orbital"
-                className="trivia-container-image"
+                className="trivia--image-after"
                 src="orbital-header.svg"
 />,
               "to": "/",
@@ -169,7 +175,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "alt": "Orbital",
-                "className": "trivia-container-image",
+                "className": "trivia--image-after",
                 "src": "orbital-header.svg",
               },
               "ref": null,
@@ -178,6 +184,7 @@ ShallowWrapper {
             },
             "type": [Function],
           },
+          false,
         ],
         "type": "div",
       },
@@ -289,7 +296,7 @@ ShallowWrapper {
             >
                         <img
                                     alt="Orbital"
-                                    className="trivia-container-image"
+                                    className="trivia--image-after"
                                     src="orbital-header.svg"
                         />
             </NavLink>
@@ -341,10 +348,11 @@ ShallowWrapper {
 >
                 <img
                                 alt="Orbital"
-                                className="trivia-container-image"
+                                className="trivia--image-after"
                                 src="orbital-header.svg"
                 />
 </NavLink>,
+              false,
             ],
             "className": "trivia-container-header",
           },
@@ -389,7 +397,7 @@ ShallowWrapper {
                 "aria-current": "page",
                 "children": <img
                   alt="Orbital"
-                  className="trivia-container-image"
+                  className="trivia--image-after"
                   src="orbital-header.svg"
 />,
                 "to": "/",
@@ -401,7 +409,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "alt": "Orbital",
-                  "className": "trivia-container-image",
+                  "className": "trivia--image-after",
                   "src": "orbital-header.svg",
                 },
                 "ref": null,
@@ -410,6 +418,7 @@ ShallowWrapper {
               },
               "type": [Function],
             },
+            false,
           ],
           "type": "div",
         },

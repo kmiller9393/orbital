@@ -11,6 +11,7 @@ describe('TriviaContainer', () => {
   let wrapper;
   let mockTriviaAnswers;
   let mockHistory;
+  let mockLocation;
   let mockEvent;
 
   beforeEach(() => {
@@ -35,6 +36,10 @@ describe('TriviaContainer', () => {
       },
       replace: () => jest.fn()
     };
+
+    mockLocation = {
+      pathname: '/review-one'
+    };
   });
 
   describe('TriviaContainer component', () => {
@@ -43,6 +48,7 @@ describe('TriviaContainer', () => {
         <TriviaContainer
           triviaAnswers={mockTriviaAnswers}
           history={mockHistory}
+          location={mockLocation}
         />
       );
       expect(wrapper).toMatchSnapshot();
@@ -53,6 +59,7 @@ describe('TriviaContainer', () => {
         <TriviaContainer
           triviaAnswers={mockTriviaAnswers}
           history={mockHistory}
+          location={mockLocation}
         />
       );
       const spy = jest.spyOn(wrapper.instance(), 'checkAnswer');
