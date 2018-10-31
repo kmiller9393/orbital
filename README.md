@@ -10,7 +10,7 @@ Orbital is a mobile-first application that utilizes data from Hubblesite's API w
 
 1. Clone down this repository
 
-2. npm install
+2. `npm install`
 
 3. Before starting the application, download the Allow-Control-Allow-Origin Cors Extension that is compatible with your browser.
    
