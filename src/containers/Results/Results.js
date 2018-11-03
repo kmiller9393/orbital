@@ -7,10 +7,6 @@ import orbital from '../../images/orbital-header.svg';
 import './Results.css';
 
 export class Results extends Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
   render() {
     const { score, resetScore } = this.props;
 
