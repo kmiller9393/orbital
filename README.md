@@ -8,11 +8,11 @@ Orbital is a mobile-first application that utilizes data from Hubblesite's API w
 
 #### Getting Started
 
-1. Clone down this repository
+1. Clone down this repository.
 
-2. npm install
+2. `npm install`.
 
-3. npm start
+3. `npm start`.
 
 ### User Interface
 
