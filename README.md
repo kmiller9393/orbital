@@ -10,7 +10,7 @@ Orbital is a mobile-first application that utilizes data from Hubblesite's API w
 
 * View Deployed Application here: https://orbital-app.herokuapp.com/
   
-OR
+  OR
 
 1. Clone down this repository.
 
