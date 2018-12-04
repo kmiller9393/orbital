@@ -5,6 +5,7 @@ import ReviewContainer from '../../containers/ReviewContainer/ReviewContainer';
 import TriviaContainer from '../../containers/TriviaContainer/TriviaContainer';
 import Trivia from '../Trivia/Trivia';
 import Results from '../../containers/Results/Results';
+import CurrentEvents from '../../containers/CurrentEvents/CurrentEvents';
 import { Route } from 'react-router-dom';
 import './App.css';
 
@@ -26,6 +27,7 @@ export default class App extends Component {
         <Route path="/trivia-four" component={TriviaContainer} />
         <Route path="/trivia-five" component={TriviaContainer} />
         <Route path="/results" component={Results} />
+        <Route exact path="/current-events" component={CurrentEvents} />
       </div>
     );
   }
