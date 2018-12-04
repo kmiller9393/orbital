@@ -2,12 +2,10 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-top: 1.5rem;
-}
+  margin-top: 1.5rem; }
 
 .review-header-container {
-  padding-right: 6.5rem;
-}
+  padding-right: 6.5rem; }
 
 .review-button {
   background-color: #009c92;
@@ -15,34 +13,28 @@
   border-radius: 5px;
   height: 45px;
   margin-bottom: 1rem;
-  width: 175px;
-}
+  width: 175px; }
 
 .back-arrow {
   height: 40px;
-  padding: 0rem 4rem 0.5rem 0rem;
-}
+  padding: 0rem 4rem 0.5rem 0rem; }
 
 .review-header {
   color: #f7f7f7;
-  margin-top: 2.5rem;
-}
+  margin-top: 2.5rem; }
 
 .review-header-image {
   height: 55px;
   margin-top: 1.5rem;
-  width: 125px;
-}
+  width: 125px; }
 
 .review-page-link {
   color: #f7f7f7;
   font-size: 1.3rem;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 .review-container {
   align-items: center;
   display: flex;
   flex-direction: column;
-  font-family: 'Chalkboard SE', 'Times New Roman', serif;
-}
+  font-family: 'Chalkboard SE', 'Times New Roman', serif; }
