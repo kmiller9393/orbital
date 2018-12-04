@@ -10,6 +10,20 @@ export const cleanFacts = triviaFacts => {
   return triviaAnswers;
 };
 
+export const cleanEvents = events => {
+  const spaceEvents = events.reduce((acc, item, index) => {
+    acc.push({
+      date: item.date,
+      description: item.explanation,
+      id: index,
+      image: item.url,
+      title: item.title
+    });
+    return acc;
+  }, []);
+  return spaceEvents;
+};
+
 export const addTriviaOne = triviaSet => {
   const firstTriviaSet = triviaSet.slice(0, 9);
   return firstTriviaSet;
