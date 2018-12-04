@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { populateTriviaFacts } from '../../thunks/populateTriviaFacts';
 import { populateReview } from '../../thunks/populateReview';
+import { populateEvents } from '../../thunks/populateEvents';
 import orbital from '../../images/orbital-header.svg';
 import './Home.css';
 
@@ -16,6 +17,11 @@ export class Home extends Component {
   setReviewItems = async () => {
     const { populateReview } = this.props;
     await populateReview();
+  };
+
+  setCurrentEvents = async () => {
+    const { populateEvents } = this.props;
+    await populateEvents();
   };
 
   render() {
@@ -46,6 +52,16 @@ export class Home extends Component {
               Trivia Center
             </NavLink>
           </button>
+          <button className="home-button">
+            <NavLink
+              className="current-link-1"
+              to="/current-events"
+              onClick={this.setCurrentEvents}
+              name="current-events"
+            >
+              Current Events
+            </NavLink>
+          </button>
         </div>
       </div>
     );
@@ -54,7 +70,8 @@ export class Home extends Component {
 
 export const mapDispatchToProps = dispatch => ({
   populateTrivia: () => dispatch(populateTriviaFacts()),
-  populateReview: () => dispatch(populateReview())
+  populateReview: () => dispatch(populateReview()),
+  populateEvents: () => dispatch(populateEvents())
 });
 
 export default connect(

@@ -8,6 +8,11 @@ export const addTriviaSet = triviaSet => ({
   triviaSet
 });
 
+export const addSpaceEvents = events => ({
+  type: 'ADD_SPACE_EVENTS',
+  events
+});
+
 export const addScore = score => ({
   type: 'ADD_SCORE',
   score

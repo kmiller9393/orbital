@@ -5,8 +5,8 @@ export const populateReview = () => {
   return async dispatch => {
     try {
       const facts = await fetchSpaceFacts();
-      const factsWithId = facts.map((fact, i) => ({ ...fact, id: i }));
-      dispatch(addGlossary(factsWithId));
+      const factsWithIds = facts.map((fact, i) => ({ ...fact, id: i }));
+      dispatch(addGlossary(factsWithIds));
     } catch (error) {
       throw new Error(error.message);
     }

@@ -7,7 +7,6 @@ export const populateTriviaFacts = () => {
     try {
       const triviaItems = await fetchSpaceFacts();
       const triviaAnswers = cleanFacts(triviaItems);
-
       dispatch(addTriviaSet(triviaAnswers));
     } catch (error) {
       throw new Error(error.message);

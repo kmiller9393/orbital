@@ -9,3 +9,15 @@ export const fetchSpaceFacts = async () => {
     throw new Error(error.message);
   }
 };
+
+export const fetchPicsOfDay = async () => {
+  const url =
+    'https://api.nasa.gov/planetary/apod?api_key=nLdGXgll7kvRQaMpzlmlCLyF1ivnLs94ygOmbVvp&start_date=2018-12-01&end_date=2018-12-03';
+  try {
+    const response = await fetch(url);
+    const fetchedPic = await response.json();
+    return fetchedPic;
+  } catch (error) {
+    throw new Error(error.message);
+  }
+};
