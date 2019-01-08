@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Home from '../../containers/Home/Home';
-import Review from '../Review/Review';
+import Review from '../../containers/Review/Review';
 import ReviewContainer from '../../containers/ReviewContainer/ReviewContainer';
 import TriviaContainer from '../../containers/TriviaContainer/TriviaContainer';
-import Trivia from '../Trivia/Trivia';
+import Trivia from '../../containers/Trivia/Trivia';
 import Results from '../../containers/Results/Results';
 import CurrentEvents from '../../containers/CurrentEvents/CurrentEvents';
 import { Route } from 'react-router-dom';
