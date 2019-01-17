@@ -1,8 +1,8 @@
-import { getCurrentDate, getTwoDaysAgoDate } from './helper.js';
+import { getCurrentDate, getPrevDate } from './helper.js';
 
 const currentDate = getCurrentDate();
 
-const previousDate = getTwoDaysAgoDate();
+const previousDate = getPrevDate();
 
 export const fetchSpaceFacts = async () => {
   const url =

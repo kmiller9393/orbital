@@ -86,14 +86,14 @@ export const getCurrentDate = () => {
   return [year, month, day].join('-');
 };
 
-export const getTwoDaysAgoDate = () => {
+export const getPrevDate = () => {
   let date = new Date(),
     month = '' + (date.getMonth() + 1),
-    day = '' + date.getDate(),
+    day = '' + date.getDate() - 2,
     year = date.getFullYear();
 
   if (month.length < 2) month = '0' + month;
-  if (day.length < 2) day = '0' + (day - 2);
+  if (day.length < 2) day = '0' + day;
 
   return [year, month, day].join('-');
 };
