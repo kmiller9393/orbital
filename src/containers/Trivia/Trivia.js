@@ -7,6 +7,14 @@ import loadingGif from '../../images/loading-globe.gif';
 import './Trivia.css';
 
 class Trivia extends Component {
+  handleRoute = e => {
+    const { name } = e.target;
+
+    const { history } = this.props;
+
+    history.push(name);
+  };
+
   render() {
     const { triviaAnswers } = this.props;
 
@@ -40,30 +48,40 @@ class Trivia extends Component {
         )}
         {triviaAnswers.length ? (
           <div className="trivia-button-container">
-            <button className="trivia-button">
-              <NavLink className="trivia-page-link" to="/trivia-one" name="1">
-                Week 1
-              </NavLink>
+            <button
+              className="trivia-button trivia-page-link"
+              name="/trivia-one"
+              onClick={this.handleRoute}
+            >
+              Week 1
             </button>
-            <button className="trivia-button">
-              <NavLink className="trivia-page-link" to="/trivia-two" name="2">
-                Week 2
-              </NavLink>
+            <button
+              className="trivia-button trivia-page-link"
+              name="/trivia-two"
+              onClick={this.handleRoute}
+            >
+              Week 2
             </button>
-            <button className="trivia-button">
-              <NavLink className="trivia-page-link" to="/trivia-three" name="3">
-                Week 3
-              </NavLink>
+            <button
+              className="trivia-button trivia-page-link"
+              name="/trivia-three"
+              onClick={this.handleRoute}
+            >
+              Week 3
             </button>
-            <button className="trivia-button">
-              <NavLink className="trivia-page-link" to="/trivia-four" name="4">
-                Week 4
-              </NavLink>
+            <button
+              className="trivia-button trivia-page-link"
+              name="/trivia-four"
+              onClick={this.handleRoute}
+            >
+              Week 4
             </button>
-            <button className="trivia-button">
-              <NavLink className="trivia-page-link" to="/trivia-five" name="5">
-                Week 5
-              </NavLink>
+            <button
+              className="trivia-button trivia-page-link"
+              name="/trivia-five"
+              onClick={this.handleRoute}
+            >
+              Week 5
             </button>
           </div>
         ) : (
