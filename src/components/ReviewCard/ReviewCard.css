@@ -3,6 +3,7 @@
   background-color: #b72424;
   border-radius: 7px;
   color: #f7f7f7;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
