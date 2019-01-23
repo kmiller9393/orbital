@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { populateTriviaFacts } from '../../thunks/populateTriviaFacts';
 import { populateReview } from '../../thunks/populateReview';
@@ -9,18 +8,27 @@ import orbital from '../../images/orbital-header.svg';
 import './Home.css';
 
 export class Home extends Component {
-  setTriviaItems = async () => {
-    const { populateTrivia } = this.props;
+  handleTriviaRoute = async () => {
+    const { populateTrivia, history } = this.props;
+
+    history.push('/trivia-center');
+
     await populateTrivia();
   };
 
-  setReviewItems = async () => {
-    const { populateReview } = this.props;
+  handleReviewRoute = async () => {
+    const { populateReview, history } = this.props;
+
+    history.push('/review');
+
     await populateReview();
   };
 
-  setCurrentEvents = async () => {
-    const { populateEvents } = this.props;
+  handleEventsRoute = async () => {
+    const { populateEvents, history } = this.props;
+
+    history.push('/current-events');
+
     await populateEvents();
   };
 
@@ -32,35 +40,23 @@ export class Home extends Component {
           <h1 className="header-title">Welcome Back</h1>
         </header>
         <div className="homepage-buttons">
-          <button className="home-button">
-            <NavLink
-              className="review-link-1"
-              to="/review"
-              onClick={this.setReviewItems}
-              name="review-link"
-            >
-              Review
-            </NavLink>
+          <button
+            className="home-button review-link-1"
+            onClick={this.handleReviewRoute}
+          >
+            Review
           </button>
-          <button className="home-button">
-            <NavLink
-              className="trivia-link-1"
-              to="/trivia-center"
-              onClick={this.setTriviaItems}
-              name="trivia-link"
-            >
-              Trivia Center
-            </NavLink>
+          <button
+            className="home-button trivia-link-1"
+            onClick={this.handleTriviaRoute}
+          >
+            Trivia Center
           </button>
-          <button className="home-button">
-            <NavLink
-              className="current-link-1"
-              to="/current-events"
-              onClick={this.setCurrentEvents}
-              name="current-events"
-            >
-              Current Events
-            </NavLink>
+          <button
+            className="home-button current-link-1"
+            onClick={this.handleEventsRoute}
+          >
+            Current Events
           </button>
         </div>
       </div>
