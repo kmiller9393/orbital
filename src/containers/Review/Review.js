@@ -7,6 +7,14 @@ import loadingGif from '../../images/loading-globe.gif';
 import './Review.css';
 
 class Review extends Component {
+  handleRoute = e => {
+    const { name } = e.target;
+
+    const { history } = this.props;
+
+    history.push(name);
+  };
+
   render() {
     const { glossary } = this.props;
 
@@ -40,30 +48,40 @@ class Review extends Component {
         )}
         {glossary.length ? (
           <div className="review-button-container">
-            <button className="review-button">
-              <NavLink className="review-page-link" to="/review-one">
-                Week 1
-              </NavLink>
+            <button
+              className="review-button review-page-link"
+              name="/review-one"
+              onClick={this.handleRoute}
+            >
+              Week 1
             </button>
-            <button className="review-button">
-              <NavLink className="review-page-link" to="/review-two">
-                Week 2
-              </NavLink>
+            <button
+              className="review-button review-page-link"
+              name="/review-two"
+              onClick={this.handleRoute}
+            >
+              Week 2
             </button>
-            <button className="review-button">
-              <NavLink className="review-page-link" to="/review-three">
-                Week 3
-              </NavLink>
+            <button
+              className="review-button review-page-link"
+              name="/review-three"
+              onClick={this.handleRoute}
+            >
+              Week 3
             </button>
-            <button className="review-button">
-              <NavLink className="review-page-link" to="/review-four">
-                Week 4
-              </NavLink>
+            <button
+              className="review-button review-page-link"
+              name="/review-four"
+              onClick={this.handleRoute}
+            >
+              Week 4
             </button>
-            <button className="review-button">
-              <NavLink className="review-page-link" to="/review-five">
-                Week 5
-              </NavLink>
+            <button
+              className="review-button review-page-link"
+              name="/review-five"
+              onClick={this.handleRoute}
+            >
+              Week 5
             </button>
           </div>
         ) : (
