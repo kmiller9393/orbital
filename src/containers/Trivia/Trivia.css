@@ -1,3 +1,7 @@
+.loading-gif {
+  max-height: 50px;
+  max-width: 50px; }
+
 .trivia-header-image {
   height: 55px;
   margin-top: 1.5rem;
@@ -11,10 +15,14 @@
   padding-right: 6.5rem; }
 
 .trivia-container {
-  font-family: 'Chalkboard SE', 'Times New Roman', serif;
   align-items: center;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  font-family: 'Chalkboard SE', 'Times New Roman', serif;
+  height: 100%; }
+
+.center {
+  justify-content: center; }
 
 .back-arrow {
   height: 40px;
@@ -24,10 +32,14 @@
   background-color: #009c92;
   border-color: #009c92;
   border-radius: 5px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   height: 45px;
   margin-bottom: 1rem;
   width: 175px; }
+
+.trivia-button:active {
+  background-color: #02b0a4; }
 
 .trivia-page-link {
   color: #f7f7f7;

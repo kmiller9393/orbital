@@ -2,6 +2,7 @@
   align-items: center;
   background-color: #b72424;
   border-radius: 7px;
+  box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.5);
   color: #f7f7f7;
   cursor: pointer;
   display: flex;
@@ -9,7 +10,11 @@
   justify-content: center;
   height: 265px;
   margin: 1.5rem 1.75rem 0 1.75rem;
-  padding: 0.25rem 0 0.5rem 0; }
+  padding: 0.25rem 0 0.5rem 0;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2); }
+
+.Card:active {
+  background-color: #cd1a1a; }
 
 .card-title {
   font-size: 2rem;

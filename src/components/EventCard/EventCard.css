@@ -8,6 +8,15 @@
   margin-top: 1rem;
   width: 90%; }
 
+.event-card-title {
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3); }
+
+.card-date {
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2); }
+
 .card-description {
+  line-height: 120%;
+  text-indent: 1rem;
   text-align: left;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2);
   width: 90%; }

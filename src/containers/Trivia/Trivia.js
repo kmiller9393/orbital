@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import orbital from '../../images/orbital-header.svg';
 import backArrow from '../../images/left-arrow.svg';
-import loadingGif from '../../images/loading-globe.gif';
+import loadingGif from '../../images/loader.gif';
 import './Trivia.css';
 
 class Trivia extends Component {
@@ -19,7 +19,11 @@ class Trivia extends Component {
     const { triviaAnswers } = this.props;
 
     return (
-      <div className="trivia-container">
+      <div
+        className={
+          !triviaAnswers.length ? 'trivia-container center' : 'trivia-container'
+        }
+      >
         {!triviaAnswers.length ? (
           <img className="loading-gif" src={loadingGif} alt="loading" />
         ) : (

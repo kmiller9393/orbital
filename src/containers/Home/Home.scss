@@ -6,16 +6,20 @@
   justify-content: space-between;
   padding-top: 1.5rem;
 }
+
 .header-title {
   color: #f7f7f7;
   font-family: 'Chalkboard SE', 'Times New Roman', serif;
   font-size: 1.6rem;
   font-weight: lighter;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.7);
 }
+
 .main-header-image {
   height: 55px;
   width: 125px;
 }
+
 .review-link-1,
 .trivia-link-1,
 .current-link-1 {
@@ -23,19 +27,27 @@
   font-size: 1.5rem;
   text-decoration: none;
 }
+
 .homepage-buttons {
   align-items: center;
   display: flex;
   flex-direction: column;
   margin-top: 3rem;
 }
+
 .home-button {
   background-color: #009c92;
   border-color: #009c92;
   border-radius: 5px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   font-family: 'Chalkboard SE', 'Times New Roman', serif;
   height: 55px;
   margin-top: 2.5rem;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
   width: 220px;
+}
+
+.home-button:active {
+  background-color: #02b0a4;
 }

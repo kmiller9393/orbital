@@ -50,7 +50,7 @@ export class Home extends Component {
             className="home-button trivia-link-1"
             onClick={this.handleTriviaRoute}
           >
-            Trivia Center
+            Trivia
           </button>
           <button
             className="home-button current-link-1"

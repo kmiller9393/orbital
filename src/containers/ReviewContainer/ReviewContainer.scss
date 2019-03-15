@@ -7,6 +7,7 @@
 .week-title {
   color: #f7f7f7;
   font-family: 'Chalkboard SE', 'Times New Roman', serif;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.7);
 }
 
 .button-container {
@@ -27,11 +28,17 @@
   background-color: #009c92;
   border-color: #009c92;
   border-radius: 5px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   color: #f7f7f7;
   font-family: 'Chalkboard SE', 'Times New Roman', serif;
   font-size: 1.2rem;
   height: 45px;
   margin-top: 1rem;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
   width: 110px;
+}
+
+.review-container-button:active {
+  background-color: #02b0a4;
 }

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import EventCard from '../../components/EventCard/EventCard';
 import orbital from '../../images/orbital-header.svg';
 import backArrow from '../../images/left-arrow.svg';
-import loadingGif from '../../images/loading-globe.gif';
+import loadingGif from '../../images/loader.gif';
 import './CurrentEvents.css';
 
 class CurrentEvents extends Component {
@@ -16,7 +16,13 @@ class CurrentEvents extends Component {
     ));
 
     return (
-      <div className="current-event-container">
+      <div
+        className={
+          !spaceEvents.length
+            ? 'current-events-container center'
+            : 'current-events-container'
+        }
+      >
         {!spaceEvents.length ? (
           <img className="loading-gif" src={loadingGif} alt="loading" />
         ) : (

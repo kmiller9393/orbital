@@ -5,10 +5,14 @@
 
 .trivia-title {
   color: #f7f7f7;
-  font-family: 'Chalkboard SE', 'Times New Roman', serif; }
+  font-family: 'Chalkboard SE', 'Times New Roman', serif;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.7); }
 
 .trivia-container-header {
   padding-right: 6.5rem; }
+
+.question {
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.5); }
 
 .back-arrow {
   height: 40px;
@@ -22,9 +26,14 @@
   align-items: center;
   background-color: #b72424;
   border-radius: 8px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   display: flex;
   font-size: 1.1rem;
   height: 70px;
   justify-content: center;
-  margin: 1.5rem 1rem 1rem 1rem; }
+  margin: 1.5rem 1rem 1rem 1rem;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3); }
+
+.trivia-card:active {
+  background-color: #cd1a1a; }

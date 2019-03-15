@@ -138,21 +138,19 @@ export class TriviaContainer extends Component {
         <h2 className="trivia-title">Weekly Trivia</h2>
 
         <div className="answers-container">
-          {ready && <h3>What is {triviaItems[page].question}?</h3>}
-          <div className="choice-card" onClick={e => this.checkAnswer(e)}>
-            {answers[page + 2]}
-          </div>
+          {ready && (
+            <h3 className="question">What is {triviaItems[page].question}?</h3>
+          )}
+          <div onClick={e => this.checkAnswer(e)}>{answers[page + 2]}</div>
           {ready && (
             <div onClick={e => this.checkAnswer(e)} className="trivia-card">
               {triviaItems[page].answer}
             </div>
           )}
-          <div className="option" onClick={e => this.checkAnswer(e)}>
+          <div onClick={e => this.checkAnswer(e)}>
             {answers[(page + 1) * 4]}
           </div>
-          <div className="choice" onClick={e => this.checkAnswer(e)}>
-            {answers[page + 1]}
-          </div>
+          <div onClick={e => this.checkAnswer(e)}>{answers[page + 1]}</div>
         </div>
       </div>
     );

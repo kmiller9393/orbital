@@ -1,3 +1,19 @@
+.current-events-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.center {
+  justify-content: center;
+}
+
+.loading-gif {
+  max-height: 50px;
+  max-width: 50px;
+}
+
 .events-header-image {
   height: 55px;
   margin-top: 1.5rem;

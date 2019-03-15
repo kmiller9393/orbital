@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import orbital from '../../images/orbital-header.svg';
 import backArrow from '../../images/left-arrow.svg';
-import loadingGif from '../../images/loading-globe.gif';
+import loadingGif from '../../images/loader.gif';
 import './Review.css';
 
 class Review extends Component {
@@ -19,7 +19,11 @@ class Review extends Component {
     const { glossary } = this.props;
 
     return (
-      <div className="review-container">
+      <div
+        className={
+          !glossary.length ? 'review-container center' : 'review-container'
+        }
+      >
         {!glossary.length ? (
           <img className="loading-gif" src={loadingGif} alt="loading" />
         ) : (
@@ -42,7 +46,7 @@ class Review extends Component {
           ''
         )}
         {glossary.length ? (
-          <h2 className="review-header">Weekly Reviews</h2>
+          <h2 className="review-header">Weekly Review</h2>
         ) : (
           ''
         )}
