@@ -13,9 +13,6 @@
   padding: 0.25rem 0 0.5rem 0;
   text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2); }
 
-.Card:active {
-  background-color: #cd1a1a; }
-
 .card-title {
   font-size: 2rem;
   padding-top: 1rem; }
