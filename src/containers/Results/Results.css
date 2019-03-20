@@ -20,3 +20,21 @@
 
 .score-container {
   margin-top: 10rem; }
+
+.results-button {
+  background-color: #009c92;
+  border-color: #009c92;
+  border-radius: 5px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+  color: #f7f7f7;
+  cursor: pointer;
+  font-family: 'Chalkboard SE', 'Times New Roman', serif;
+  font-size: 1.4rem;
+  height: 55px;
+  margin-top: 2.5rem;
+  text-decoration: none;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  width: 220px; }
+
+.results-button:active {
+  background-color: #03aca1; }

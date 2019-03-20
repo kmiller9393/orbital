@@ -6,7 +6,14 @@ import PropTypes from 'prop-types';
 import orbital from '../../images/orbital-header.svg';
 import './Results.css';
 
-export class Results extends Component {
+class Results extends Component {
+  handleRoute = () => {
+    const { resetScore, history } = this.props;
+
+    resetScore();
+    history.push('/trivia-center');
+  }
+
   render() {
     const { score, resetScore } = this.props;
 
@@ -24,7 +31,8 @@ export class Results extends Component {
             </span>
           </p>
         </div>
-      </div>
+        <button className="results-button" onClick={this.handleRoute}>To Trivia Center</button>
+      </div >
     );
   }
 }
