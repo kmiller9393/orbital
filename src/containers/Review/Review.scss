@@ -7,7 +7,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
 }
 
 .review-header-container {
@@ -15,8 +15,8 @@
 }
 
 .review-button {
-  background-color: #009c92;
-  border-color: #009c92;
+  background-color: rgb(71, 162, 52);
+  border-color: rgb(71, 162, 52);
   border-radius: 5px;
   box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.3);
   cursor: pointer;
@@ -27,7 +27,7 @@
 }
 
 .review-button:active {
-  background-color: #02b0a4;
+  background-color: rgb(79, 184, 59);
 }
 
 .back-arrow {

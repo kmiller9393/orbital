@@ -1,6 +1,7 @@
 .trivia-choice {
   align-items: center;
-  background-color: #b72424;
+  background-color: #009c92;
+  border-color: #009c92;
   border-radius: 8px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
   cursor: pointer;
@@ -13,5 +14,5 @@
 }
 
 .trivia-choice:active {
-  background-color: #cd1a1a;
+  background-color: #03aca1;
 }
