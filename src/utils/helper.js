@@ -12,7 +12,7 @@ export const cleanFacts = triviaFacts => {
 
 export const cleanEvents = events => {
   const spaceEvents = events.reduce((acc, item, index) => {
-    acc.push({
+    acc.unshift({
       date: item.date,
       description: item.explanation,
       id: index,
