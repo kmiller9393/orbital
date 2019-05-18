@@ -1,7 +1,6 @@
 import { getCurrentDate, getPrevDate } from './helper.js';
 
 const currentDate = getCurrentDate();
-
 const previousDate = getPrevDate();
 
 export const fetchSpaceFacts = async () => {
